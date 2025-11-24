@@ -1,0 +1,1241 @@
+/* ===============================================
+   KBCC Website - Clean, Modern, Trustworthy Design
+   Light Mode with Thick Borders
+   =============================================== */
+
+:root {
+    --royal-blue: #002366;
+    --gold: #D4AF37;
+    --white: #ffffff;
+    --light-grey: #f5f7fa;
+    --medium-grey: #e1e8ed;
+    --text-grey: #4a5568;
+    --border-color: #d1d9e0;
+    --heading-font: 'Oswald', sans-serif;
+    --body-font: 'Lora', serif;
+}
+
+/* ===============================================
+   Reset & Base Styles
+   =============================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    background: var(--white);
+    color: var(--text-grey);
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--royal-blue);
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ===============================================
+   Navigation Bar
+   =============================================== */
+.navbar {
+    background: var(--white);
+    border-bottom: 2px solid var(--medium-grey);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--royal-blue);
+    text-transform: uppercase;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: 2px solid var(--royal-blue);
+    color: var(--royal-blue);
+    font-size: 1.25rem;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 0;
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 12px 24px;
+    color: var(--royal-blue);
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+}
+
+/* ===============================================
+   Buttons - Thick Borders
+   =============================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: var(--white);
+    border-color: var(--gold);
+}
+
+.btn-primary:hover {
+    background: var(--white);
+    color: var(--gold);
+}
+
+.btn-secondary {
+    background: var(--royal-blue);
+    color: var(--white);
+    border-color: var(--royal-blue);
+}
+
+.btn-secondary:hover {
+    background: var(--white);
+    color: var(--royal-blue);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--royal-blue);
+    border-color: var(--royal-blue);
+}
+
+.btn-outline:hover {
+    background: var(--royal-blue);
+    color: var(--white);
+}
+
+.btn-small {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+}
+
+/* ===============================================
+   Split Hero Section
+   =============================================== */
+.hero-split {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.hero-split-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.hero-left {
+    padding-right: 40px;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--light-grey);
+    color: var(--royal-blue);
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 2px solid var(--medium-grey);
+    border-radius: 4px;
+    margin-bottom: 24px;
+}
+
+.hero-title {
+    margin-bottom: 24px;
+}
+
+.hero-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 32px;
+    color: var(--text-grey);
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1;
+    border: 2px solid var(--medium-grey);
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 35, 102, 0.1);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===============================================
+   Section Styles
+   =============================================== */
+.section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.section-grey {
+    background: var(--light-grey);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-label {
+    display: block;
+    font-family: var(--heading-font);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    margin-bottom: 0;
+}
+
+/* ===============================================
+   Service Cards with Thick Borders
+   =============================================== */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.service-card {
+    background: var(--white);
+    border: 2px solid var(--medium-grey);
+    border-radius: 4px;
+    padding: 40px 32px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.service-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 10px 30px rgba(0, 35, 102, 0.1);
+    transform: translateY(-4px);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-grey);
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+}
+
+.service-icon i {
+    font-size: 2.5rem;
+    color: var(--gold);
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+.service-name {
+    color: var(--royal-blue);
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-bottom: 16px;
+}
+
+.service-day {
+    color: var(--text-grey);
+    margin-bottom: 8px;
+}
+
+.service-time {
+    color: var(--gold);
+    font-family: var(--heading-font);
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.service-address {
+    color: var(--text-grey);
+    font-size: 0.95rem;
+}
+
+/* ===============================================
+   Sermon Card Grid - Thick Borders
+   =============================================== */
+.sermon-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+}
+
+.sermon-card {
+    background: var(--white);
+    border: 2px solid var(--medium-grey);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.sermon-card:hover {
+    border-color: var(--royal-blue);
+    box-shadow: 0 10px 30px rgba(0, 35, 102, 0.1);
+    transform: translateY(-4px);
+}
+
+.sermon-thumbnail {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-bottom: 2px solid var(--medium-grey);
+}
+
+.sermon-placeholder {
+    width: 100%;
+    height: 100%;
+    background: var(--light-grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sermon-placeholder i {
+    font-size: 4rem;
+    color: var(--gold);
+}
+
+.sermon-card-content {
+    padding: 32px;
+}
+
+.sermon-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--gold);
+    color: var(--white);
+    font-family: var(--heading-font);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    margin-bottom: 16px;
+}
+
+.sermon-card h3 {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+.sermon-author {
+    color: var(--text-grey);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 16px;
+}
+
+.sermon-excerpt {
+    color: var(--text-grey);
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+/* ===============================================
+   Welcome Box
+   =============================================== */
+.welcome-box {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px;
+    background: var(--white);
+    border: 2px solid var(--medium-grey);
+    border-radius: 4px;
+    text-align: center;
+}
+
+.welcome-box h2 {
+    margin: 20px 0 32px;
+}
+
+.intro-text {
+    font-size: 1.25rem;
+    color: var(--royal-blue);
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.signature-section {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 2px solid var(--medium-grey);
+}
+
+.signature-name {
+    font-family: var(--heading-font);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--royal-blue);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.signature-title {
+    color: var(--text-grey);
+    font-size: 0.95rem;
+}
+
+/* ===============================================
+   Event Cards - Thick Borders
+   =============================================== */
+.event-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+}
+
+.event-card {
+    background: var(--white);
+    border: 2px solid var(--medium-grey);
+    border-radius: 4px;
+    padding: 32px;
+    transition: all 0.3s;
+}
+
+.event-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 10px 30px rgba(0, 35, 102, 0.1);
+    transform: translateY(-4px);
+}
+
+.event-date {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 24px;
+    background: var(--light-grey);
+    border: 2px solid var(--royal-blue);
+    border-radius: 4px;
+    margin-bottom: 24px;
+}
+
+.event-day {
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--royal-blue);
+    line-height: 1;
+}
+
+.event-month {
+    font-family: var(--heading-font);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.event-card h3 {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+.event-theme {
+    color: var(--gold);
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-bottom: 16px;
+}
+
+.event-details {
+    color: var(--text-grey);
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.event-details i {
+    color: var(--gold);
+    margin-right: 8px;
+}
+
+/* ===============================================
+   Social Cards
+   =============================================== */
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+.social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 32px;
+    background: var(--white);
+    border: 2px solid var(--medium-grey);
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.social-card:hover {
+    border-color: var(--royal-blue);
+    box-shadow: 0 10px 30px rgba(0, 35, 102, 0.1);
+    transform: translateY(-4px);
+}
+
+.social-card i {
+    font-size: 3.5rem;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.social-card h4 {
+    margin-bottom: 8px;
+    font-size: 1.25rem;
+}
+
+.social-card p {
+    color: var(--text-grey);
+    margin: 0;
+}
+
+/* ===============================================
+   Footer
+   =============================================== */
+.footer {
+    background: var(--royal-blue);
+    color: var(--white);
+    padding: 60px 0 24px;
+    border-top: 4px solid var(--gold);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    margin-bottom: 16px;
+}
+
+.footer h4,
+.footer h5 {
+    color: var(--gold);
+    margin-bottom: 16px;
+}
+
+.footer p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer li {
+    margin-bottom: 12px;
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: var(--gold);
+}
+
+.footer i {
+    color: var(--gold);
+    margin-right: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 32px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ===============================================
+   Page Header (for internal pages)
+   =============================================== */
+.page-header {
+    background: var(--royal-blue);
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+    border-bottom: 4px solid var(--gold);
+}
+
+.page-header h1 {
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+.page-header p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.15rem;
+}
+
+/* ===============================================
+   Content Section (for internal pages)
+   =============================================== */
+.content-section {
+    padding: 80px 0;
+}
+
+.content-box {
+    background: var(--white);
+    border: 2px solid var(--medium-grey);
+    border-radius: 4px;
+    padding: 48px;
+    margin-bottom: 32px;
+}
+
+.content-box h2,
+.content-box h3 {
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+
+.content-box h2:first-child,
+.content-box h3:first-child {
+    margin-top: 0;
+}
+
+.content-box ul,
+.content-box ol {
+    margin-left: 24px;
+    margin-bottom: 16px;
+}
+
+.content-box li {
+    margin-bottom: 8px;
+}
+
+/* ===============================================
+   Value Cards (for About page)
+   =============================================== */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.value-card {
+    background: var(--white);
+    border: 2px solid var(--medium-grey);
+    border-radius: 4px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.value-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-4px);
+}
+
+.value-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-grey);
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+}
+
+.value-icon i {
+    font-size: 2rem;
+    color: var(--gold);
+}
+
+.value-card h4 {
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+}
+
+.value-card p {
+    color: var(--text-grey);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* ===============================================
+   Leadership Cards
+   =============================================== */
+.leader-profile {
+    background: var(--white);
+    border: 2px solid var(--medium-grey);
+    border-radius: 4px;
+    padding: 48px;
+    margin-bottom: 40px;
+}
+
+.leader-header {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+    margin-bottom: 32px;
+}
+
+.leader-photo-box {
+    width: 200px;
+    height: 200px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--light-grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leader-photo-box i {
+    font-size: 5rem;
+    color: var(--gold);
+}
+
+.leader-info h2 {
+    margin-bottom: 8px;
+}
+
+.leader-title {
+    color: var(--gold);
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+}
+
+.leader-bio h4 {
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.leader-bio ul {
+    margin-left: 24px;
+}
+
+.leader-bio li {
+    margin-bottom: 8px;
+}
+
+/* ===============================================
+   Events List (for Events page)
+   =============================================== */
+.event-list-item {
+    background: var(--white);
+    border: 2px solid var(--medium-grey);
+    border-radius: 4px;
+    padding: 40px;
+    margin-bottom: 32px;
+    transition: all 0.3s;
+}
+
+.event-list-item:hover {
+    border-color: var(--gold);
+    box-shadow: 0 10px 30px rgba(0, 35, 102, 0.1);
+}
+
+.event-list-item h3 {
+    margin-bottom: 12px;
+}
+
+.event-description {
+    color: var(--text-grey);
+    margin: 16px 0;
+}
+
+.event-meta {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid var(--light-grey);
+}
+
+.event-meta span {
+    color: var(--text-grey);
+}
+
+/* ===============================================
+   Gallery Grid
+   =============================================== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.gallery-item {
+    aspect-ratio: 4 / 3;
+    border: 2px solid var(--medium-grey);
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.gallery-item:hover {
+    border-color: var(--gold);
+    transform: scale(1.02);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===============================================
+   Contact Form
+   =============================================== */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 48px;
+}
+
+.contact-form {
+    background: var(--white);
+    border: 2px solid var(--medium-grey);
+    border-radius: 4px;
+    padding: 40px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    color: var(--royal-blue);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--medium-grey);
+    border-radius: 4px;
+    font-family: var(--body-font);
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.contact-info-box {
+    background: var(--light-grey);
+    border: 2px solid var(--medium-grey);
+    border-radius: 4px;
+    padding: 40px;
+}
+
+.contact-info-item {
+    margin-bottom: 32px;
+}
+
+.contact-info-item h4 {
+    margin-bottom: 12px;
+}
+
+.contact-info-item p {
+    color: var(--text-grey);
+    margin: 0;
+}
+
+.contact-info-item a {
+    color: var(--gold);
+}
+
+.contact-info-item i {
+    color: var(--gold);
+    margin-right: 8px;
+}
+
+.form-message {
+    margin-top: 20px;
+    padding: 16px 20px;
+    border: 2px solid;
+    border-radius: 4px;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    text-align: center;
+    display: none;
+}
+
+.form-message.success {
+    background: #d1fae5;
+    color: #065f46;
+    border-color: #059669;
+}
+
+.form-message.error {
+    background: #fee2e2;
+    color: #991b1b;
+    border-color: #dc2626;
+}
+
+/* ===============================================
+   Map Section
+   =============================================== */
+.map-section {
+    padding: 80px 0;
+    background: var(--light-grey);
+}
+
+.map-container {
+    border: 2px solid var(--medium-grey);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.map-container iframe {
+    display: block;
+}
+
+/* ===============================================
+   Lightbox (for Gallery)
+   =============================================== */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.lightbox.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border: 4px solid var(--white);
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: var(--white);
+    font-size: 3rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: color 0.3s;
+}
+
+.close-lightbox:hover {
+    color: var(--gold);
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--white);
+    color: var(--royal-blue);
+    border: 2px solid var(--gold);
+    font-size: 2rem;
+    padding: 16px 24px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.lightbox-nav:hover {
+    background: var(--gold);
+    color: var(--white);
+}
+
+.lightbox-nav.prev { left: 30px; }
+.lightbox-nav.next { right: 30px; }
+
+/* ===============================================
+   Responsive Design
+   =============================================== */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 32px;
+    }
+    
+    .hero-split-content,
+    .leader-header {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    
+    .hero-left {
+        padding-right: 0;
+    }
+    
+    .hero-image {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .mobile-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        border-top: 2px solid var(--medium-grey);
+        border-bottom: 2px solid var(--medium-grey);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s;
+    }
+    
+    .nav-menu.active {
+        max-height: 500px;
+    }
+    
+    .nav-menu a {
+        border-bottom: 1px solid var(--light-grey);
+        border-left: none;
+    }
+    
+    .section,
+    .hero-split {
+        padding: 60px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .service-grid,
+    .sermon-card-grid,
+    .event-card-grid,
+    .social-grid,
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .welcome-box {
+        padding: 40px 24px;
+    }
+    
+    .content-box {
+        padding: 32px 24px;
+    }
+    
+    .leader-profile {
+        padding: 32px 24px;
+    }
+    
+    .event-list-item {
+        padding: 32px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.35rem; }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero-text {
+        font-size: 1rem;
+    }
+    
+    .welcome-box {
+        padding: 32px 20px;
+    }
+    
+    .lightbox-nav {
+        padding: 12px 16px;
+        font-size: 1.5rem;
+    }
+    
+    .lightbox-nav.prev { left: 10px; }
+    .lightbox-nav.next { right: 10px; }
+}
+
+/* ===============================================
+   Utility Classes
+   =============================================== */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
