@@ -1,101 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery - KBCC</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <a href="index.html" class="logo">
-                    <img src="images/logo.jpg" alt="KBCC Logo">
-                    <span>KBCC</span>
-                </a>
-                <button class="mobile-toggle" id="mobileToggle">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="leadership.html">Leadership</a></li>
-                    <li><a href="sermons.html">Sermons</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="gallery.html" class="active">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="KBCC Logo" />
+            <span>KBCC</span>
+          </a>
+          <button class="mobile-toggle" id="mobileToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href="sermons.html">Sermons</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Page Header -->
     <section class="page-header">
-        <div class="container">
-            <h1>Media Gallery</h1>
-            <p>Moments from our services, events, and community life</p>
-        </div>
+      <div class="container">
+        <h1>Media Gallery</h1>
+        <p>Moments from our services, events, and community life</p>
+      </div>
     </section>
 
     <!-- Gallery -->
     <section class="gallery-section">
-        <div class="container">
-            <div class="gallery-grid" id="galleryGrid">
-                <!-- Gallery items will be dynamically generated -->
-            </div>
+      <div class="container">
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Gallery items will be dynamically generated -->
         </div>
+      </div>
     </section>
 
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox">
-        <span class="close-lightbox" id="closeLightbox">&times;</span>
-        <img class="lightbox-content" id="lightboxImg">
-        <button class="lightbox-nav prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
-        <button class="lightbox-nav next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+      <span class="close-lightbox" id="closeLightbox">&times;</span>
+      <img class="lightbox-content" id="lightboxImg" />
+      <button class="lightbox-nav prev" id="prevBtn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="lightbox-nav next" id="nextBtn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Kingdom of Believers Christian Centre</h4>
-                    <p>Raising men and women who will be Answers in the society.</p>
-                    <p><strong>EST. 2003</strong></p>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="leadership.html">Leadership</a></li>
-                        <li><a href="sermons.html">Sermons</a></li>
-                        <li><a href="events.html">Events</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> 4, Alhaji Yusuf Adebayo Street, Olodi Apapa, Lagos</p>
-                    <p><i class="fas fa-envelope"></i> kbccmails2015@gmail.com</p>
-                    <p><i class="fas fa-clock"></i> Tue-Sat: 9am - 5pm</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Service Times</h4>
-                    <p><strong>Wednesday:</strong> 6:00 PM</p>
-                    <p><strong>Sunday:</strong> 8:00 AM & 10:00 AM</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Kingdom of Believers Christian Centre. All rights reserved.</p>
-            </div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>Kingdom of Believers Christian Centre</h4>
+            <p>Raising men and women who will be Answers in the society.</p>
+            <p><strong>EST. 2003</strong></p>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="leadership.html">Leadership</a></li>
+              <li><a href="sermons.html">Sermons</a></li>
+              <li><a href="events.html">Events</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 4, Alhaji Yusuf Adebayo
+              Street, Olodi Apapa, Lagos
+            </p>
+            <p><i class="fas fa-envelope"></i> kbccmails2015@gmail.com</p>
+            <p><i class="fas fa-clock"></i> Tue-Sat: 9am - 5pm</p>
+          </div>
+          <div class="footer-col">
+            <h4>Service Times</h4>
+            <p><strong>Wednesday:</strong> 6:00 PM</p>
+            <p><strong>Sunday:</strong> 8:00 AM & 10:00 AM</p>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 Kingdom of Believers Christian Centre. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
