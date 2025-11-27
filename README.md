@@ -134,6 +134,16 @@ The contact form currently shows a success message client-side. To make it funct
 3. Update the endpoint URL to your server
 4. Add server-side email handling
 
+## 📚 Documentation
+
+Three documentation files are included:
+
+1. **PROJECT_OVERVIEW.md** - Simple, jargon-free overview of the project
+2. **QUICK_REFERENCE.md** - Quick code snippets and examples
+3. **PROJECT_DOCUMENTATION.md** - Detailed technical documentation
+
+Start with PROJECT_OVERVIEW.md for a clear understanding of what's in the project.
+
 ## 🙏 Credits
 
 **Kingdom of Believers Christian Centre**
