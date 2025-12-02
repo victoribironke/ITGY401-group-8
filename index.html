@@ -41,34 +41,126 @@
       </div>
     </nav>
 
-    <!-- Split Hero Section -->
-    <section class="hero-split">
-      <div class="container">
-        <div class="hero-split-content">
-          <div class="hero-left">
-            <div class="hero-badge">EST. 2003</div>
-            <h1 class="hero-title">Welcome to<br />The Answer City</h1>
-            <p class="hero-text">
-              At Kingdom of Believers Christian Centre, we believe that every
-              person is created by God with a unique purpose and the potential
-              to be an Answer in their generation. Our vision is simple yet
-              profound:
-              <strong
-                >Raising men and women who will be Answers in the
-                society.</strong
-              >
-            </p>
-            <a href="contact.html" class="btn btn-primary">
-              <span>Plan a Visit</span>
-              <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-          <div class="hero-right">
-            <div class="hero-image">
-              <img src="images/logo.jpg" alt="KBCC Community" />
+    <!-- Hero Slider Section -->
+    <section class="hero-slider">
+      <div class="slider-container">
+        <!-- Slide 1: Welcome -->
+        <div class="slide active">
+          <div class="slide-background" style="background: linear-gradient(135deg, #002366 0%, #1e3a8a 100%);"></div>
+          <div class="container">
+            <div class="slide-content">
+              <div class="slide-badge">EST. 2003</div>
+              <h1 class="slide-title">Welcome to<br />The Answer City</h1>
+              <p class="slide-text">
+                Raising men and women who will be Answers in the society.
+              </p>
+              <div class="slide-buttons">
+                <a href="contact.html" class="btn btn-primary">
+                  <span>Plan Your Visit</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="about.html" class="btn btn-outline-white">
+                  <span>Learn More</span>
+                  <i class="fas fa-info-circle"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- Slide 2: Fire Power Night -->
+        <div class="slide">
+          <div class="slide-background" style="background: linear-gradient(135deg, #1a1a1a 0%, #002366 100%);"></div>
+          <div class="container">
+            <div class="slide-content">
+              <div class="slide-badge">DON'T MISS</div>
+              <h1 class="slide-title">Fire Power Night</h1>
+              <p class="slide-text-large">The Rain of Miracles</p>
+              <p class="slide-text">
+                November 28, 2025 | 9:00 PM | The Answer City
+              </p>
+              <div class="slide-buttons">
+                <a href="events.html" class="btn btn-primary">
+                  <span>View All Events</span>
+                  <i class="fas fa-calendar"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: Service Times -->
+        <div class="slide">
+          <div class="slide-background" style="background: linear-gradient(135deg, #002366 0%, #2563eb 100%);"></div>
+          <div class="container">
+            <div class="slide-content">
+              <div class="slide-badge">JOIN US</div>
+              <h1 class="slide-title">Service Times</h1>
+              <div class="slide-service-times">
+                <div class="slide-service-item">
+                  <i class="fas fa-calendar-week"></i>
+                  <h3>Wednesday</h3>
+                  <p>Spirit Communion Service</p>
+                  <span class="time">6:00 PM</span>
+                </div>
+                <div class="slide-service-item">
+                  <i class="fas fa-church"></i>
+                  <h3>Sunday</h3>
+                  <p>Service of Grace & Glory</p>
+                  <span class="time">8:00 AM & 10:00 AM</span>
+                </div>
+              </div>
+              <div class="slide-buttons">
+                <a href="contact.html" class="btn btn-primary">
+                  <span>Get Directions</span>
+                  <i class="fas fa-map-marker-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4: Latest Sermon -->
+        <div class="slide">
+          <div class="slide-background" style="background: linear-gradient(135deg, #1e3a8a 0%, #002366 100%);"></div>
+          <div class="container">
+            <div class="slide-content">
+              <div class="slide-badge">LATEST MESSAGE</div>
+              <h1 class="slide-title">The Name of Jesus</h1>
+              <p class="slide-text-large">Part 1</p>
+              <p class="slide-text">
+                Discover the depth, weight, and glory wrapped inside the name
+                that God exalted above every other name.
+              </p>
+              <div class="slide-buttons">
+                <a href="sermons.html" class="btn btn-primary">
+                  <span>Watch Now</span>
+                  <i class="fas fa-play-circle"></i>
+                </a>
+                <a href="sermons.html" class="btn btn-outline-white">
+                  <span>All Sermons</span>
+                  <i class="fas fa-book-open"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider Navigation -->
+      <button class="slider-arrow slider-prev" id="sliderPrev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="slider-arrow slider-next" id="sliderNext">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <!-- Slider Dots -->
+      <div class="slider-dots" id="sliderDots">
+        <button class="dot active" data-slide="0"></button>
+        <button class="dot" data-slide="1"></button>
+        <button class="dot" data-slide="2"></button>
+        <button class="dot" data-slide="3"></button>
       </div>
     </section>
 
