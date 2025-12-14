@@ -1,342 +1,547 @@
-/* KBCC Website - Vanilla JS
-   - Mobile navigation toggle
-   - Homepage carousel (auto + arrows + dots + swipe)
-   - Media gallery grid + lightbox
-   - About page accordion enhancement (optional single-open behavior)
-   - Contact form UX validation (client-side only)
-*/
+/* ============================================
+   KBCC Church Website - Main JavaScript
+   Contemporary Minimal Design
+   ============================================ */
 
-const TELEGRAM_LINK = "https://t.me/TheAnswerNation";
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize all modules
+  initNavigation();
+  initHeroSlider();
+  initScrollAnimations();
+  initAccordion();
+  initGalleryLightbox();
+  initContactForm();
+  initScrollToTop();
+});
 
-// Images are numeric in /images and already exist in this repo as .jpeg.
-// Keep this list as the single source of truth for:
-// - homepage slider
-// - media gallery grid
-const galleryImages = Array.from({ length: 32 }, (_, i) => `images/${i + 1}.jpeg`);
+/* ============================================
+   1. NAVIGATION
+   ============================================ */
+function initNavigation() {
+  const navWrapper = document.querySelector(".nav-wrapper");
+  const navToggle = document.querySelector(".nav-toggle");
+  const navMenu = document.querySelector(".nav-menu");
+  const mobileOverlay = document.querySelector(".mobile-overlay");
+  const navLinks = document.querySelectorAll(".nav-link");
 
-function qs(sel, root = document) {
-  return root.querySelector(sel);
-}
-
-function qsa(sel, root = document) {
-  return Array.from(root.querySelectorAll(sel));
-}
-
-function clamp(n, min, max) {
-  return Math.max(min, Math.min(max, n));
-}
-
-function initActiveNav() {
-  const path = (location.pathname || "").split("/").pop() || "index.html";
-  qsa('[data-nav-link="true"]').forEach((a) => {
-    const href = a.getAttribute("href");
-    if (!href) return;
-    const hrefFile = href.split("/").pop();
-    if (hrefFile === path) a.setAttribute("aria-current", "page");
-  });
-}
-
-function initMobileNav() {
-  const toggle = qs("[data-nav-toggle]");
-  const menu = qs("[data-nav-menu]");
-  if (!toggle || !menu) return;
-
-  const setOpen = (open) => {
-    toggle.setAttribute("aria-expanded", String(open));
-    menu.classList.toggle("is-open", open);
+  // Scroll handler for navbar background
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      navWrapper?.classList.add("scrolled");
+    } else {
+      navWrapper?.classList.remove("scrolled");
+    }
   };
 
-  toggle.addEventListener("click", () => {
-    const open = toggle.getAttribute("aria-expanded") !== "true";
-    setOpen(open);
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  handleScroll(); // Initial check
+
+  // Mobile menu toggle
+  const toggleMenu = () => {
+    navToggle?.classList.toggle("active");
+    navMenu?.classList.toggle("active");
+    mobileOverlay?.classList.toggle("active");
+    document.body.style.overflow = navMenu?.classList.contains("active")
+      ? "hidden"
+      : "";
+  };
+
+  navToggle?.addEventListener("click", toggleMenu);
+  mobileOverlay?.addEventListener("click", toggleMenu);
+
+  // Close menu on link click
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (navMenu?.classList.contains("active")) {
+        toggleMenu();
+      }
+    });
   });
 
-  // Close on link click (mobile)
-  menu.addEventListener("click", (e) => {
-    const a = e.target.closest("a");
-    if (!a) return;
-    setOpen(false);
-  });
-
-  // Close on escape
+  // Close menu on escape key
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") setOpen(false);
+    if (e.key === "Escape" && navMenu?.classList.contains("active")) {
+      toggleMenu();
+    }
   });
 
-  // Close if clicking outside
-  document.addEventListener("click", (e) => {
-    if (!menu.classList.contains("is-open")) return;
-    if (e.target.closest("[data-nav]")) return;
-    setOpen(false);
+  // Set active nav link based on current page
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  navLinks.forEach((link) => {
+    const href = link.getAttribute("href");
+    if (href === currentPage || (currentPage === "" && href === "index.html")) {
+      link.classList.add("active");
+    }
   });
 }
 
-function initCarousel() {
-  const root = qs("[data-carousel]");
-  if (!root) return;
+/* ============================================
+   2. HERO IMAGE SLIDER
+   ============================================ */
+function initHeroSlider() {
+  const slider = document.querySelector(".hero-slider");
+  if (!slider) return;
 
-  const track = qs("[data-carousel-track]", root);
-  const dots = qs("[data-carousel-dots]", root);
-  const prevBtn = qs("[data-carousel-prev]", root);
-  const nextBtn = qs("[data-carousel-next]", root);
+  const slides = slider.querySelectorAll(".hero-slide");
+  const dotsContainer = document.querySelector(".hero-controls");
+  const prevBtn = document.querySelector(".slider-arrow.prev");
+  const nextBtn = document.querySelector(".slider-arrow.next");
 
-  if (!track || !dots || !prevBtn || !nextBtn) return;
+  if (slides.length === 0) return;
 
-  const images = galleryImages;
-  if (!images.length) return;
+  let currentIndex = 0;
+  let autoPlayInterval;
+  let isTransitioning = false;
+  let touchStartX = 0;
+  let touchEndX = 0;
 
-  let index = 0;
-  let timer = null;
-  let touchStartX = null;
-  let touchDeltaX = 0;
-  const intervalMs = 5000; // 4–6 seconds requirement
+  // Create dots if container exists
+  if (dotsContainer) {
+    slides.forEach((_, index) => {
+      const dot = document.createElement("button");
+      dot.className = `hero-dot ${index === 0 ? "active" : ""}`;
+      dot.setAttribute("aria-label", `Go to slide ${index + 1}`);
+      dot.addEventListener("click", () => goToSlide(index));
+      dotsContainer.appendChild(dot);
+    });
+  }
 
-  const slides = images.map((src, i) => {
-    const slide = document.createElement("div");
-    slide.className = "carousel__slide" + (i === 0 ? " is-active" : "");
-    slide.setAttribute("role", "group");
-    slide.setAttribute("aria-roledescription", "slide");
-    slide.setAttribute("aria-label", `${i + 1} of ${images.length}`);
+  const dots = dotsContainer?.querySelectorAll(".hero-dot");
 
-    const img = document.createElement("img");
-    img.loading = i === 0 ? "eager" : "lazy";
-    img.decoding = "async";
-    img.alt = "KBCC media highlight";
-    img.src = src;
+  function goToSlide(index) {
+    if (isTransitioning || index === currentIndex) return;
+    isTransitioning = true;
 
-    slide.appendChild(img);
-    track.appendChild(slide);
-    return slide;
+    slides[currentIndex].classList.remove("active");
+    dots?.[currentIndex]?.classList.remove("active");
+
+    currentIndex = index;
+    if (currentIndex >= slides.length) currentIndex = 0;
+    if (currentIndex < 0) currentIndex = slides.length - 1;
+
+    slides[currentIndex].classList.add("active");
+    dots?.[currentIndex]?.classList.add("active");
+
+    setTimeout(() => {
+      isTransitioning = false;
+    }, 1000);
+
+    resetAutoPlay();
+  }
+
+  function nextSlide() {
+    goToSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    goToSlide(currentIndex - 1);
+  }
+
+  function startAutoPlay() {
+    autoPlayInterval = setInterval(nextSlide, 6000);
+  }
+
+  function resetAutoPlay() {
+    clearInterval(autoPlayInterval);
+    startAutoPlay();
+  }
+
+  // Arrow navigation
+  prevBtn?.addEventListener("click", prevSlide);
+  nextBtn?.addEventListener("click", nextSlide);
+
+  // Touch/Swipe support
+  slider.addEventListener(
+    "touchstart",
+    (e) => {
+      touchStartX = e.touches[0].clientX;
+    },
+    { passive: true }
+  );
+
+  slider.addEventListener(
+    "touchmove",
+    (e) => {
+      touchEndX = e.touches[0].clientX;
+    },
+    { passive: true }
+  );
+
+  slider.addEventListener("touchend", () => {
+    const diff = touchStartX - touchEndX;
+    const threshold = 50;
+
+    if (Math.abs(diff) > threshold) {
+      if (diff > 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
   });
 
-  const dotButtons = images.map((_, i) => {
-    const b = document.createElement("button");
-    b.className = "carousel__dot";
-    b.type = "button";
-    b.setAttribute("aria-label", `Go to slide ${i + 1}`);
-    b.setAttribute("aria-current", i === 0 ? "true" : "false");
-    b.addEventListener("click", () => goTo(i, true));
-    dots.appendChild(b);
-    return b;
+  // Keyboard navigation
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") prevSlide();
+    if (e.key === "ArrowRight") nextSlide();
   });
 
-  function render() {
-    slides.forEach((s, i) => s.classList.toggle("is-active", i === index));
-    dotButtons.forEach((d, i) => d.setAttribute("aria-current", i === index ? "true" : "false"));
+  // Pause on hover (optional)
+  slider.addEventListener("mouseenter", () => clearInterval(autoPlayInterval));
+  slider.addEventListener("mouseleave", startAutoPlay);
+
+  // Start autoplay
+  startAutoPlay();
+
+  // Respect reduced motion
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    clearInterval(autoPlayInterval);
+  }
+}
+
+/* ============================================
+   3. SCROLL ANIMATIONS (Intersection Observer)
+   ============================================ */
+function initScrollAnimations() {
+  const animatedElements = document.querySelectorAll(".fade-in");
+
+  if (animatedElements.length === 0) return;
+
+  // Respect reduced motion preference
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    animatedElements.forEach((el) => el.classList.add("visible"));
+    return;
   }
 
-  function goTo(nextIndex, userInitiated = false) {
-    index = (nextIndex + images.length) % images.length;
-    render();
-    if (userInitiated) restart();
-  }
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px 0px -100px 0px",
+    threshold: 0.1,
+  };
 
-  function next(userInitiated = false) {
-    goTo(index + 1, userInitiated);
-  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Add staggered delay for multiple elements
+        setTimeout(() => {
+          entry.target.classList.add("visible");
+        }, index * 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
 
-  function prev(userInitiated = false) {
-    goTo(index - 1, userInitiated);
-  }
+  animatedElements.forEach((el) => observer.observe(el));
+}
 
-  function start() {
-    stop();
-    timer = window.setInterval(() => next(false), intervalMs);
-  }
+/* ============================================
+   4. ACCORDION (Statement of Faith)
+   ============================================ */
+function initAccordion() {
+  const accordionItems = document.querySelectorAll(".accordion-item");
 
-  function stop() {
-    if (timer) window.clearInterval(timer);
-    timer = null;
-  }
+  if (accordionItems.length === 0) return;
 
-  function restart() {
-    start();
-  }
+  accordionItems.forEach((item) => {
+    const header = item.querySelector(".accordion-header");
+    const content = item.querySelector(".accordion-content");
 
-  prevBtn.addEventListener("click", () => prev(true));
-  nextBtn.addEventListener("click", () => next(true));
+    if (!header || !content) return;
 
-  // Swipe (touch)
-  const viewport = qs("[data-carousel-viewport]", root);
-  if (viewport) {
-    viewport.addEventListener(
-      "touchstart",
-      (e) => {
-        touchStartX = e.touches[0]?.clientX ?? null;
-        touchDeltaX = 0;
-      },
-      { passive: true }
-    );
-    viewport.addEventListener(
-      "touchmove",
-      (e) => {
-        if (touchStartX == null) return;
-        const x = e.touches[0]?.clientX ?? touchStartX;
-        touchDeltaX = x - touchStartX;
-      },
-      { passive: true }
-    );
-    viewport.addEventListener(
-      "touchend",
-      () => {
-        if (touchStartX == null) return;
-        const threshold = 40;
-        if (Math.abs(touchDeltaX) > threshold) {
-          if (touchDeltaX < 0) next(true);
-          else prev(true);
+    header.addEventListener("click", () => {
+      const isActive = item.classList.contains("active");
+
+      // Close all other items
+      accordionItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.classList.remove("active");
+          const otherContent = otherItem.querySelector(".accordion-content");
+          if (otherContent) otherContent.style.maxHeight = null;
         }
-        touchStartX = null;
-        touchDeltaX = 0;
-      },
-      { passive: true }
-    );
-  }
-
-  // Pause when tab is hidden
-  document.addEventListener("visibilitychange", () => {
-    if (document.hidden) stop();
-    else start();
-  });
-
-  render();
-  start();
-}
-
-function initGallery() {
-  const grid = qs("[data-gallery-grid]");
-  if (!grid) return;
-
-  const lightbox = qs("[data-lightbox]");
-  const lbImg = qs("[data-lightbox-img]");
-  const lbClose = qs("[data-lightbox-close]");
-  const lbPrev = qs("[data-lightbox-prev]");
-  const lbNext = qs("[data-lightbox-next]");
-  const lbCount = qs("[data-lightbox-count]");
-
-  if (!lightbox || !lbImg || !lbClose || !lbPrev || !lbNext || !lbCount) return;
-
-  const images = galleryImages;
-  let index = 0;
-
-  function openAt(i) {
-    index = clamp(i, 0, images.length - 1);
-    lbImg.src = images[index];
-    lbImg.alt = `KBCC gallery image ${index + 1}`;
-    lbCount.textContent = `${index + 1} / ${images.length}`;
-    lightbox.classList.add("is-open");
-    lightbox.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-    lbClose.focus();
-  }
-
-  function close() {
-    lightbox.classList.remove("is-open");
-    lightbox.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-  }
-
-  function next() {
-    openAt((index + 1) % images.length);
-  }
-
-  function prev() {
-    openAt((index - 1 + images.length) % images.length);
-  }
-
-  // Build grid in numeric order
-  images.forEach((src, i) => {
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "gallery-item";
-    btn.setAttribute("aria-label", `Open image ${i + 1}`);
-    btn.addEventListener("click", () => openAt(i));
-
-    const img = document.createElement("img");
-    img.src = src;
-    img.alt = `KBCC gallery thumbnail ${i + 1}`;
-    img.loading = "lazy";
-    img.decoding = "async";
-
-    btn.appendChild(img);
-    grid.appendChild(btn);
-  });
-
-  lbClose.addEventListener("click", close);
-  lbNext.addEventListener("click", next);
-  lbPrev.addEventListener("click", prev);
-
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) close();
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (!lightbox.classList.contains("is-open")) return;
-    if (e.key === "Escape") close();
-    if (e.key === "ArrowRight") next();
-    if (e.key === "ArrowLeft") prev();
-  });
-}
-
-function initAccordionSingleOpen() {
-  const accordion = qs("[data-accordion]");
-  if (!accordion) return;
-  const detailsEls = qsa("details", accordion);
-  detailsEls.forEach((d) => {
-    d.addEventListener("toggle", () => {
-      if (!d.open) return;
-      detailsEls.forEach((other) => {
-        if (other !== d) other.open = false;
       });
+
+      // Toggle current item
+      item.classList.toggle("active");
+
+      if (!isActive) {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        content.style.maxHeight = null;
+      }
+    });
+
+    // Keyboard accessibility
+    header.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        header.click();
+      }
     });
   });
 }
 
-function initContactForm() {
-  const form = qs("[data-contact-form]");
-  const toast = qs("[data-form-toast]");
-  if (!form || !toast) return;
+/* ============================================
+   5. GALLERY LIGHTBOX
+   ============================================ */
+function initGalleryLightbox() {
+  const galleryItems = document.querySelectorAll(".gallery-item");
+  const lightbox = document.querySelector(".lightbox");
+  const lightboxImg = lightbox?.querySelector("img");
+  const lightboxClose = lightbox?.querySelector(".lightbox-close");
+  const lightboxPrev = lightbox?.querySelector(".lightbox-prev");
+  const lightboxNext = lightbox?.querySelector(".lightbox-next");
 
-  const name = qs('input[name="name"]', form);
-  const email = qs('input[name="email"]', form);
-  const message = qs('textarea[name="message"]', form);
+  if (!lightbox || galleryItems.length === 0) return;
+
+  let currentImageIndex = 0;
+  const images = Array.from(galleryItems)
+    .map((item) => item.querySelector("img")?.src)
+    .filter(Boolean);
+
+  function openLightbox(index) {
+    currentImageIndex = index;
+    if (lightboxImg && images[index]) {
+      lightboxImg.src = images[index];
+      lightboxImg.alt = `Gallery image ${index + 1}`;
+    }
+    lightbox.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  function showImage(index) {
+    if (index >= images.length) index = 0;
+    if (index < 0) index = images.length - 1;
+    currentImageIndex = index;
+    if (lightboxImg && images[index]) {
+      lightboxImg.src = images[index];
+      lightboxImg.alt = `Gallery image ${index + 1}`;
+    }
+  }
+
+  function nextImage() {
+    showImage(currentImageIndex + 1);
+  }
+
+  function prevImage() {
+    showImage(currentImageIndex - 1);
+  }
+
+  // Event listeners
+  galleryItems.forEach((item, index) => {
+    item.addEventListener("click", () => openLightbox(index));
+    item.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openLightbox(index);
+      }
+    });
+    item.setAttribute("tabindex", "0");
+    item.setAttribute("role", "button");
+    item.setAttribute("aria-label", `View gallery image ${index + 1}`);
+  });
+
+  lightboxClose?.addEventListener("click", closeLightbox);
+  lightboxPrev?.addEventListener("click", prevImage);
+  lightboxNext?.addEventListener("click", nextImage);
+
+  // Close on background click
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  // Keyboard navigation
+  document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("active")) return;
+
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowLeft") prevImage();
+    if (e.key === "ArrowRight") nextImage();
+  });
+
+  // Touch/swipe support in lightbox
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  lightbox.addEventListener(
+    "touchstart",
+    (e) => {
+      touchStartX = e.touches[0].clientX;
+    },
+    { passive: true }
+  );
+
+  lightbox.addEventListener("touchend", (e) => {
+    touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX - touchEndX;
+    const threshold = 50;
+
+    if (Math.abs(diff) > threshold) {
+      if (diff > 0) {
+        nextImage();
+      } else {
+        prevImage();
+      }
+    }
+  });
+}
+
+/* ============================================
+   6. CONTACT FORM
+   ============================================ */
+function initContactForm() {
+  const form = document.querySelector(".contact-form form");
+  const successMessage = document.querySelector(".form-success");
+
+  if (!form) return;
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    const n = (name?.value || "").trim();
-    const em = (email?.value || "").trim();
-    const msg = (message?.value || "").trim();
 
-    const okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em);
-    if (!n || !okEmail || !msg) {
-      toast.textContent = "Please fill in your name, a valid email, and your message.";
-      toast.classList.add("is-visible");
+    // Get form data
+    const formData = new FormData(form);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+
+    // Basic validation
+    if (!name || !email || !message) {
+      alert("Please fill in all required fields.");
       return;
     }
 
-    // Client-side only: show a success message.
-    toast.textContent =
-      "Thank you. Your message has been received. Someone from KBCC will get back to you shortly.";
-    toast.classList.add("is-visible");
-    form.reset();
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    // Show loading state
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn?.innerHTML;
+    if (submitBtn) {
+      submitBtn.innerHTML = '<span class="loading"></span> Sending...';
+      submitBtn.disabled = true;
+    }
+
+    // Simulate form submission (replace with actual backend)
+    setTimeout(() => {
+      form.reset();
+      if (successMessage) {
+        successMessage.classList.add("show");
+        setTimeout(() => {
+          successMessage.classList.remove("show");
+        }, 5000);
+      }
+      if (submitBtn) {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }
+    }, 1500);
+
+    // Actual form submission would look like:
+    // fetch('/api/contact', {
+    //   method: 'POST',
+    //   body: formData
+    // })
+    // .then(response => response.json())
+    // .then(data => {
+    //   // Handle success
+    // })
+    // .catch(error => {
+    //   // Handle error
+    // });
   });
 }
 
-function initTelegramButtons() {
-  qsa("[data-telegram]").forEach((a) => {
-    a.setAttribute("href", TELEGRAM_LINK);
-    a.setAttribute("target", "_blank");
-    a.setAttribute("rel", "noopener noreferrer");
+/* ============================================
+   7. SCROLL TO TOP BUTTON
+   ============================================ */
+function initScrollToTop() {
+  const scrollTopBtn = document.querySelector(".scroll-top");
+
+  if (!scrollTopBtn) return;
+
+  // Show/hide button based on scroll position
+  const toggleButton = () => {
+    if (window.scrollY > 500) {
+      scrollTopBtn.classList.add("visible");
+    } else {
+      scrollTopBtn.classList.remove("visible");
+    }
+  };
+
+  window.addEventListener("scroll", toggleButton, { passive: true });
+
+  // Scroll to top on click
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  initActiveNav();
-  initMobileNav();
-  initTelegramButtons();
-  initCarousel();
-  initGallery();
-  initAccordionSingleOpen();
-  initContactForm();
+/* ============================================
+   8. UTILITY FUNCTIONS
+   ============================================ */
+
+// Debounce function for performance
+function debounce(func, wait = 100) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Throttle function for scroll events
+function throttle(func, limit = 100) {
+  let inThrottle;
+  return function executedFunction(...args) {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+}
+
+// Smooth scroll to element
+function smoothScrollTo(element) {
+  if (!element) return;
+
+  const offset = 100; // Account for fixed header
+  const elementPosition = element.getBoundingClientRect().top;
+  const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth",
+  });
+}
+
+// Handle smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    const href = this.getAttribute("href");
+    if (href === "#") return;
+
+    const target = document.querySelector(href);
+    if (target) {
+      e.preventDefault();
+      smoothScrollTo(target);
+    }
+  });
 });
-
-

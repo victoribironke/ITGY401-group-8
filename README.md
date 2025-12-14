@@ -1,51 +1,148 @@
-## KBCC Website (Vanilla HTML/CSS/JS)
+# Kingdom of Believers Christian Centre (KBCC) Website
 
-Multi-page church website for **Kingdom of Believers Christian Centre (KBCC)** built with **vanilla HTML, CSS, and JavaScript** (no frameworks).
+A modern, serene, and welcoming church website built with vanilla HTML, CSS, and JavaScript. Contemporary minimal design with warmth.
 
-### File Structure (Deliverables)
+## 📁 Project Structure
 
 ```
-├── index.html
-├── about.html
-├── leadership.html
-├── sermons.html
-├── events.html
-├── media.html
-├── contact.html
+├── index.html          # Home page with hero slider
+├── about.html          # Vision, mission, values, statement of faith
+├── leadership.html     # Pastor profiles (PGO & PYO)
+├── sermons.html        # Video & audio messages
+├── events.html         # Upcoming events calendar
+├── media.html          # Photo gallery with lightbox
+├── contact.html        # Contact form & church info
 ├── css/
-│   └── style.css
+│   └── style.css       # Complete stylesheet with design system
 ├── js/
-│   └── main.js
-└── images/
-    ├── logo.jpg
-    ├── 1.jpeg ... 32.jpeg
+│   └── main.js         # JavaScript functionality
+└── images/             # All images (logo + 32 gallery images)
 ```
 
-### Key Features
+## 🎨 Design System
 
-- **Shared header/footer** across all pages with mobile hamburger navigation
-- **Homepage slider (mandatory)**: auto-slide (5s), arrows, dots, swipe-friendly, responsive
-- **Media gallery**: loads numeric images in order and opens a modal/lightbox with keyboard navigation
-- **About page accordion**: statement of faith in collapsible sections
-- **Sermons page**: embedded video area + prominent **Audio Messages** section linking to Telegram
-- **Contact page**: contact form UX (client-side confirmation), directions button, and Google Map embed
+### Color Palette
+- **Primary Navy**: `#0A1628` (Deep navy brand color)
+- **Gold Accent**: `#D4A574` (Warm gold)
+- **Coral CTA**: `#FF6B4A` (Vibrant coral for buttons)
+- **White/Gray**: Clean neutral backgrounds
 
-### Style Guide
+### Typography
+- **Headings**: Outfit (modern, geometric, confident)
+- **Body**: Inter (clean, readable, professional)
+- **Accent**: DM Serif Display (for emphasis)
 
-Site-wide colors (CSS variables):
-- **Primary Blue**: `#6FB6E8`
-- **Accent Gold**: `#D4AF37`
-- **White**: `#FFFFFF`
-- **Dark Charcoal**: `#1F2933`
-- **Soft Gray**: `#E5E7EB`
+### Features
+- CSS custom properties for consistent theming
+- 8px base spacing scale
+- Responsive breakpoints (640px, 768px, 1024px, 1280px)
+- Smooth transitions and animations
+- Accessibility: skip links, focus states, ARIA labels
 
-### Links
+## ✨ Key Features
 
-- **Telegram (Audio Messages)**: `https://t.me/TheAnswerNation`
-- **Facebook**: `https://www.facebook.com/kingdomofbelieversministry`
-- **YouTube**: `https://youtube.com/@kingdomofbelieverschristia7222?si=B9MEr1Zn2S5dr3TB`
-- **Instagram**: `https://www.instagram.com/kbcc_headquarters?igsh=eHFsanEzYzFlaTli`
+### Navigation
+- Floating translucent navbar with backdrop blur
+- Mobile hamburger menu with smooth animation
+- Active page highlighting
 
-### Run
+### Home Page
+- Full-height hero image slider (6s auto-advance)
+- Swipe support for mobile
+- Arrow & dot navigation
+- Pastor's welcome message
+- Service times cards
+- Location with Google Maps
+- Latest sermon preview
+- Upcoming events cards
+- Social media links
 
-Open `index.html` in a browser. For best results (and to avoid local iframe restrictions in some browsers), run a simple static server.
+### About Page
+- Vision & Mission with gradient cards
+- 10 Core Values grid
+- Statement of Faith accordion (12 points)
+- Church history
+
+### Leadership Page
+- Featured pastor profiles (PGO & PYO)
+- Alternating image/text layout
+- Full biographical information
+
+### Sermons Page
+- Featured sermon with video preview
+- Sermon series grid
+- **Audio Messages** section with Telegram link
+- YouTube & Facebook channel links
+
+### Events Page
+- All 9 upcoming events listed
+- Date badges with theme highlights
+- Time and venue information
+
+### Media Gallery
+- Responsive image grid (32 images)
+- Click to open lightbox
+- Keyboard navigation (arrows, ESC)
+- Touch/swipe support
+- Lazy loading
+
+### Contact Page
+- Contact form with validation
+- Church address & email
+- Office hours
+- Embedded Google Map
+- Get Directions button
+
+## 🚀 JavaScript Features
+
+- **Mobile Navigation**: Toggle menu with overlay
+- **Hero Slider**: Auto-advance, manual controls, touch support
+- **Scroll Animations**: Intersection Observer fade-in effects
+- **Accordion**: Expandable statement of faith
+- **Gallery Lightbox**: Modal with prev/next navigation
+- **Contact Form**: Client-side validation
+- **Scroll to Top**: Floating button appears on scroll
+
+## 📱 Responsive Design
+
+- Mobile-first approach
+- Touch-friendly elements (min 44px touch targets)
+- Breakpoints:
+  - Mobile: < 768px
+  - Tablet: 768px - 1023px
+  - Desktop: 1024px+
+
+## ♿ Accessibility
+
+- Skip to main content link
+- Semantic HTML5 structure
+- ARIA labels on interactive elements
+- Keyboard navigable
+- Focus visible states
+- Respects `prefers-reduced-motion`
+
+## 🌐 Social Links
+
+- **Facebook**: [/kingdomofbelieversministry](https://www.facebook.com/kingdomofbelieversministry)
+- **YouTube**: [@kingdomofbelieverschristia7222](https://youtube.com/@kingdomofbelieverschristia7222)
+- **Instagram**: [@kbcc_headquarters](https://www.instagram.com/kbcc_headquarters)
+- **Telegram**: [TheAnswerNation](https://t.me/TheAnswerNation)
+
+## 📧 Contact
+
+- **Email**: kbccmails2015@gmail.com
+- **Address**: 4, Alhaji Yusuf Adebayo Street, Ibafon Bus Stop, Olodi Apapa, Lagos
+- **Office Hours**: Tuesday - Saturday, 9AM - 5PM
+
+## 🙏 About KBCC
+
+**Kingdom of Believers Christian Centre** — Est. 2015
+
+**Vision**: Raising men and women who will be Answers in the society.
+
+- Lead Pastor: Pastor Gbenga Olusanya (PGO)
+- Co-Lead Pastor: Pastor Yemisi Olusanya (PYO)
+
+---
+
+Built with ❤️ for KBCC

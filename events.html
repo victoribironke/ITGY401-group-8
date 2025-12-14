@@ -1,189 +1,675 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="KBCC events — Upcoming services, conferences, and special gatherings." />
-    <title>Events — KBCC</title>
-    <link rel="icon" href="images/logo.jpg" />
+    <meta
+      name="description"
+      content="View upcoming events at KBCC including Fire Power Night, Believers Camp Meeting, Kingdom Life Conference, and more."
+    />
+    <title>Events - KBCC</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header class="site-header" data-nav>
-      <div class="container nav">
-        <a class="brand" href="index.html" aria-label="KBCC Home">
-          <img src="images/logo.jpg" alt="KBCC logo" />
-          <span class="brand__text">
-            <span class="brand__name">KBCC</span>
-            <span class="brand__tag">Kingdom of Believers Christian Centre</span>
-          </span>
+    <!-- Navigation -->
+    <header class="nav-wrapper scrolled">
+      <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+          <img src="images/logo.jpg" alt="KBCC Logo" />
         </a>
 
-        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu">
-          <span class="nav__toggle-lines" aria-hidden="true"><span></span></span>
-          <span class="sr-only">Menu</span>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+          <li><a href="sermons.html" class="nav-link">Sermons</a></li>
+          <li><a href="events.html" class="nav-link active">Events</a></li>
+          <li><a href="media.html" class="nav-link">Media</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-cta">
+            <a href="contact.html" class="btn btn-primary">Plan a Visit</a>
+          </li>
+        </ul>
+
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
-
-        <nav id="site-menu" class="nav__links" data-nav-menu aria-label="Primary">
-          <a href="index.html" data-nav-link="true">Home</a>
-          <a href="about.html" data-nav-link="true">About</a>
-          <a href="leadership.html" data-nav-link="true">Leadership</a>
-          <a href="sermons.html" data-nav-link="true">Sermons</a>
-          <a href="events.html" data-nav-link="true">Events</a>
-          <a href="media.html" data-nav-link="true">Media</a>
-          <a href="contact.html" data-nav-link="true">Contact</a>
-        </nav>
-
-        <div class="nav__cta">
-          <a class="btn btn--primary btn--small" href="contact.html#plan">Plan a Visit</a>
-        </div>
-      </div>
+      </nav>
+      <div class="mobile-overlay"></div>
     </header>
 
-    <main id="main">
-      <section class="page-hero">
-        <div class="container">
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- Page Hero -->
+      <section
+        class="page-hero"
+        style="background-image: url('images/20.jpeg')"
+      >
+        <div class="page-hero-content">
           <h1>Upcoming Events</h1>
           <p>
-            Join KBCC for life-transforming encounters—services, conferences, and special gatherings.
+            Join us for life-changing gatherings, conferences, and special
+            services.
           </p>
         </div>
       </section>
 
-      <section class="section">
-        <div class="container stack">
-          <h2 class="section-title">Events List</h2>
-          <p class="section-kicker">Times and venues are included where provided.</p>
+      <!-- Events Section -->
+      <section class="events-page-section section-padding">
+        <div class="container">
+          <div class="events-page-grid">
+            <!-- Fire Power Night -->
+            <article class="event-card fade-in">
+              <div class="event-date">
+                <span class="day">28</span>
+                <span class="month">Nov</span>
+              </div>
+              <div class="event-content">
+                <h3>Fire Power Night – November 2025</h3>
+                <p class="event-theme">Theme: The Rain of Miracles</p>
+                <p>
+                  A night of intense prayer, miracles, and divine encounters.
+                  Come expecting the supernatural!
+                </p>
+                <div class="event-meta">
+                  <span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    9:00 PM
+                  </span>
+                  <span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                    The Answer City
+                  </span>
+                </div>
+              </div>
+            </article>
 
-          <div class="grid grid--2">
-            <article class="card">
-              <div class="card__body">
-                <h3 class="card__title">Fire Power Night — November 2025</h3>
-                <p class="muted" style="margin: 0">Date: 28th November, 2025 • Time: 9:00 PM • Venue: The Answer City</p>
-                <p style="margin: 10px 0 0">Theme: The Rain of Miracles — a night of intense prayer, miracles, and divine encounters.</p>
+            <!-- Children's Christmas Party -->
+            <article class="event-card fade-in">
+              <div class="event-date">
+                <span class="day">6</span>
+                <span class="month">Dec</span>
+              </div>
+              <div class="event-content">
+                <h3>Children's Christmas Party</h3>
+                <p>
+                  A fun-filled celebration for our children with games, gifts,
+                  music, and the joy of Christmas. Bring your kids for a
+                  memorable experience!
+                </p>
+                <div class="event-meta">
+                  <span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    12:00 Noon
+                  </span>
+                  <span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                    The Answer City
+                  </span>
+                </div>
               </div>
             </article>
-            <article class="card">
-              <div class="card__body">
-                <h3 class="card__title">Children’s Christmas Party</h3>
-                <p class="muted" style="margin: 0">Date: 6th December, 2025 (First Saturday) • Time: 12:00 Noon • Venue: The Answer City</p>
-                <p style="margin: 10px 0 0">A fun-filled celebration for our children with games, gifts, music, and the joy of Christmas.</p>
+
+            <!-- Annual Family Thanksgiving -->
+            <article class="event-card fade-in">
+              <div class="event-date">
+                <span class="day">7</span>
+                <span class="month">Dec</span>
+              </div>
+              <div class="event-content">
+                <h3>Annual Family Thanksgiving Service</h3>
+                <p>
+                  A joyful moment for families to return thanks to God for His
+                  goodness all year long. Come with your entire household!
+                </p>
+                <div class="event-meta">
+                  <span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    9:00 AM
+                  </span>
+                  <span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                    The Answer City
+                  </span>
+                </div>
               </div>
             </article>
-            <article class="card">
-              <div class="card__body">
-                <h3 class="card__title">Annual Family Thanksgiving Service</h3>
-                <p class="muted" style="margin: 0">Date: 7th December, 2025 • Time: 9:00 AM • Venue: The Answer City</p>
-                <p style="margin: 10px 0 0">A joyful moment for families to return thanks to God for His goodness all year long.</p>
+
+            <!-- Pre-BCM Service -->
+            <article class="event-card fade-in">
+              <div class="event-date">
+                <span class="day">14</span>
+                <span class="month">Dec</span>
+              </div>
+              <div class="event-content">
+                <h3>Pre–Believers Camp Meeting (BCM) Service</h3>
+                <p>
+                  A prophetic prelude to the life-changing Camp Meeting. Prepare
+                  your heart for what God is about to do!
+                </p>
+                <div class="event-meta">
+                  <span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    9:00 AM
+                  </span>
+                  <span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                    The Answer City
+                  </span>
+                </div>
               </div>
             </article>
-            <article class="card">
-              <div class="card__body">
-                <h3 class="card__title">Pre–Believers Camp Meeting (BCM) Service</h3>
-                <p class="muted" style="margin: 0">Date: Sunday, 14th December, 2025 • Time: 9:00 AM • Venue: The Answer City</p>
-                <p style="margin: 10px 0 0">A prophetic prelude to the life-changing Camp Meeting.</p>
+
+            <!-- Believers Camp Meeting -->
+            <article class="event-card fade-in">
+              <div class="event-date">
+                <span class="day">18</span>
+                <span class="month">Dec</span>
+              </div>
+              <div class="event-content">
+                <h3>Believers Camp Meeting 2025</h3>
+                <p class="event-theme">Theme: The City Takers</p>
+                <p>
+                  Three days of impartation, encounters, worship, and the Word.
+                  This is our flagship annual conference—don't miss it!
+                </p>
+                <div class="event-meta">
+                  <span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
+                    18th – 20th December
+                  </span>
+                  <span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                    Redemption City of God
+                  </span>
+                </div>
               </div>
             </article>
-            <article class="card">
-              <div class="card__body">
-                <h3 class="card__title">Believers Camp Meeting 2025</h3>
-                <p class="muted" style="margin: 0">Date: 18th – 20th December, 2025 • Venue: Redemption City of God</p>
-                <p style="margin: 10px 0 0">Theme: The City Takers — three days of impartation, encounters, worship, and the Word.</p>
+
+            <!-- Christmas Service -->
+            <article class="event-card fade-in">
+              <div class="event-date">
+                <span class="day">25</span>
+                <span class="month">Dec</span>
+              </div>
+              <div class="event-content">
+                <h3>Christmas Service</h3>
+                <p>
+                  Celebrate the birth of Jesus in a joyful atmosphere of worship
+                  and thanksgiving. Join us for a special Christmas celebration!
+                </p>
+                <div class="event-meta">
+                  <span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    9:00 AM
+                  </span>
+                  <span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                    The Answer City
+                  </span>
+                </div>
               </div>
             </article>
-            <article class="card">
-              <div class="card__body">
-                <h3 class="card__title">Christmas Service</h3>
-                <p class="muted" style="margin: 0">Date: 25th December, 2025 • Time: 9:00 AM • Venue: The Answer City</p>
-                <p style="margin: 10px 0 0">Celebrate the birth of Jesus in a joyful atmosphere of worship and thanksgiving.</p>
+
+            <!-- WatchNight Service -->
+            <article class="event-card fade-in">
+              <div class="event-date">
+                <span class="day">31</span>
+                <span class="month">Dec</span>
+              </div>
+              <div class="event-content">
+                <h3>WatchNight Service</h3>
+                <p class="event-theme">
+                  Theme: Crossing Over to Possess Your Possessions
+                </p>
+                <p>
+                  Cross into the new year with prophetic declarations and
+                  supernatural alignment. Experience a powerful transition into
+                  2026!
+                </p>
+                <div class="event-meta">
+                  <span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    8:00 PM
+                  </span>
+                  <span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                    The Answer City
+                  </span>
+                </div>
               </div>
             </article>
-            <article class="card">
-              <div class="card__body">
-                <h3 class="card__title">WatchNight Service</h3>
-                <p class="muted" style="margin: 0">Date: 31st December, 2025 • Time: 8:00 PM • Venue: The Answer City</p>
-                <p style="margin: 10px 0 0">Theme: Crossing Over to Possess Your Possessions — cross into the new year with prophetic declarations.</p>
+
+            <!-- 21 Days Fast -->
+            <article class="event-card fade-in">
+              <div class="event-date">
+                <span class="day">12</span>
+                <span class="month">Jan</span>
+              </div>
+              <div class="event-content">
+                <h3>21 Days "Possessing Your Possessions" Fast</h3>
+                <p>
+                  A season of fasting, prayer, and spiritual renewal for the new
+                  year. Begin 2026 with intentional consecration and
+                  breakthrough!
+                </p>
+                <div class="event-meta">
+                  <span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
+                    12th January – 1st February, 2026
+                  </span>
+                </div>
               </div>
             </article>
-            <article class="card">
-              <div class="card__body">
-                <h3 class="card__title">21 Days “Possessing Your Possessions” Fast</h3>
-                <p class="muted" style="margin: 0">Date: 12th January – 1st February, 2026</p>
-                <p style="margin: 10px 0 0">A season of fasting, prayer, and spiritual renewal for the new year.</p>
+
+            <!-- Kingdom Life Conference -->
+            <article class="event-card fade-in">
+              <div class="event-date">
+                <span class="day">11</span>
+                <span class="month">Mar</span>
               </div>
-            </article>
-            <article class="card">
-              <div class="card__body">
-                <h3 class="card__title">Kingdom Life Conference 2026</h3>
-                <p class="muted" style="margin: 0">Date: 11th – 15th March, 2026 • Venue: The Answer City</p>
-                <p style="margin: 10px 0 0">Theme: The Heirs of God — a transformational conference to equip believers for inheritance, authority, and dominion.</p>
+              <div class="event-content">
+                <h3>Kingdom Life Conference 2026</h3>
+                <p class="event-theme">Theme: The Heirs of God</p>
+                <p>
+                  A transformational conference built to equip believers for
+                  inheritance, authority, and dominion. Five days of powerful
+                  encounters!
+                </p>
+                <div class="event-meta">
+                  <span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
+                    11th – 15th March, 2026
+                  </span>
+                  <span>
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                    The Answer City
+                  </span>
+                </div>
               </div>
             </article>
           </div>
+        </div>
+      </section>
 
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="contact.html#plan">Plan a Visit</a>
-            <a class="btn btn--secondary" data-telegram href="#">Listen on Telegram</a>
+      <!-- CTA Section -->
+      <section class="connect-section section-padding">
+        <div class="container">
+          <h2 class="fade-in">Don't Miss Out!</h2>
+          <p class="fade-in">
+            Follow us on social media to stay updated on all upcoming events and
+            special announcements.
+          </p>
+          <div class="social-links fade-in">
+            <a
+              href="https://www.facebook.com/kingdomofbelieversministry"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+              aria-label="Facebook"
+            >
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://youtube.com/@kingdomofbelieverschristia7222"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+              aria-label="YouTube"
+            >
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/kbcc_headquarters"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+              aria-label="Instagram"
+            >
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://t.me/TheAnswerNation"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+              aria-label="Telegram"
+            >
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+                />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer">
-        <div class="footer__grid">
-          <div class="footer__brand">
-            <img src="images/logo.jpg" alt="KBCC logo" />
-            <div>
-              <h3>KBCC</h3>
-              <p class="muted" style="margin: 6px 0 0; color: rgba(255, 255, 255, 0.78)">
-                Stay close — worship with us and join upcoming gatherings.
-              </p>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="images/logo.jpg" alt="KBCC Logo" />
+            <p>
+              Kingdom of Believers Christian Centre — Raising men and women who
+              will be Answers in the society.
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://www.facebook.com/kingdomofbelieversministry"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                ><svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  /></svg
+              ></a>
+              <a
+                href="https://youtube.com/@kingdomofbelieverschristia7222"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                ><svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                  /></svg
+              ></a>
+              <a
+                href="https://www.instagram.com/kbcc_headquarters"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                ><svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  /></svg
+              ></a>
+              <a
+                href="https://t.me/TheAnswerNation"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Telegram"
+                ><svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+                  /></svg
+              ></a>
             </div>
           </div>
-          <div class="footer__cols">
-            <div>
-              <h4>Quick Links</h4>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="sermons.html">Sermons</a></li>
-                <li><a href="media.html">Media</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4>Social</h4>
-              <ul>
-                <li><a href="https://www.facebook.com/kingdomofbelieversministry" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-                <li><a href="https://youtube.com/@kingdomofbelieverschristia7222?si=B9MEr1Zn2S5dr3TB" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-                <li><a href="https://www.instagram.com/kbcc_headquarters?igsh=eHFsanEzYzFlaTli" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                <li><a data-telegram href="#">Telegram (Audio)</a></li>
-              </ul>
-            </div>
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="leadership.html">Leadership</a></li>
+              <li><a href="sermons.html">Sermons</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="media.html">Media</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Service Times</h4>
+            <ul>
+              <li>Sunday First Service: 8:00 AM</li>
+              <li>Sunday Second Service: 10:00 AM</li>
+              <li>Midweek Service: Wed 6:00 PM</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Contact Us</h4>
+            <ul class="footer-contact">
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  /></svg
+                ><span
+                  >4, Alhaji Yusuf Adebayo Street, Ibafon Bus Stop, Olodi Apapa,
+                  Lagos</span
+                >
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  /></svg
+                ><span>kbccmails2015@gmail.com</span>
+              </li>
+            </ul>
           </div>
         </div>
-
-        <div class="footer__bottom">
-          <span>© <span id="year"></span> Kingdom of Believers Christian Centre (KBCC)</span>
-          <span class="muted" style="color: rgba(255, 255, 255, 0.72)">Events</span>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 Kingdom of Believers Christian Centre. All rights
+            reserved.
+          </p>
+          <p>Est. 2015 | <a href="contact.html">Contact Us</a></p>
         </div>
       </div>
     </footer>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-    <script src="js/main.js" defer></script>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" aria-label="Scroll to top">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 10l7-7m0 0l7 7m-7-7v18"
+        />
+      </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
   </body>
 </html>
-
-

@@ -1,212 +1,268 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Contact KBCC — Send a message, find service times, office hours, and directions." />
-    <title>Contact — KBCC</title>
-    <link rel="icon" href="images/logo.jpg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Kingdom of Believers Christian Centre (KBCC). Visit us at The Answer City, Lagos. Get directions, office hours, and send us a message.">
+  <title>Contact Us - KBCC</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header class="site-header" data-nav>
-      <div class="container nav">
-        <a class="brand" href="index.html" aria-label="KBCC Home">
-          <img src="images/logo.jpg" alt="KBCC logo" />
-          <span class="brand__text">
-            <span class="brand__name">KBCC</span>
-            <span class="brand__tag">Kingdom of Believers Christian Centre</span>
-          </span>
-        </a>
+  <!-- Navigation -->
+  <header class="nav-wrapper scrolled">
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.jpg" alt="KBCC Logo">
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+        <li><a href="sermons.html" class="nav-link">Sermons</a></li>
+        <li><a href="events.html" class="nav-link">Events</a></li>
+        <li><a href="media.html" class="nav-link">Media</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        <li class="nav-cta">
+          <a href="contact.html" class="btn btn-primary">Plan a Visit</a>
+        </li>
+      </ul>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+    <div class="mobile-overlay"></div>
+  </header>
 
-        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu">
-          <span class="nav__toggle-lines" aria-hidden="true"><span></span></span>
-          <span class="sr-only">Menu</span>
-        </button>
-
-        <nav id="site-menu" class="nav__links" data-nav-menu aria-label="Primary">
-          <a href="index.html" data-nav-link="true">Home</a>
-          <a href="about.html" data-nav-link="true">About</a>
-          <a href="leadership.html" data-nav-link="true">Leadership</a>
-          <a href="sermons.html" data-nav-link="true">Sermons</a>
-          <a href="events.html" data-nav-link="true">Events</a>
-          <a href="media.html" data-nav-link="true">Media</a>
-          <a href="contact.html" data-nav-link="true">Contact</a>
-        </nav>
-
-        <div class="nav__cta">
-          <a class="btn btn--primary btn--small" data-telegram href="#">Audio on Telegram</a>
-        </div>
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Page Hero -->
+    <section class="page-hero" style="background-image: url('images/22.jpeg');">
+      <div class="page-hero-content">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you. Get in touch or plan your visit today.</p>
       </div>
-    </header>
+    </section>
 
-    <main id="main">
-      <section class="page-hero" id="plan">
-        <div class="container">
-          <h1>Contact &amp; Plan a Visit</h1>
-          <p>
-            We’d love to hear from you. Send a message, or find directions and service times for your
-            first visit.
-          </p>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container grid grid--2">
-          <div class="card">
-            <div class="card__body stack">
-              <h2 class="card__title">Send Us a Message</h2>
-              <p class="muted" style="margin: 0">
-                This form shows a confirmation message in your browser. (To deliver emails, connect
-                it to a backend later.)
-              </p>
-
-              <form data-contact-form>
-                <label>
-                  Name
-                  <input name="name" type="text" autocomplete="name" required />
-                </label>
-                <label>
-                  Email
-                  <input name="email" type="email" autocomplete="email" required />
-                </label>
-                <label>
-                  Message
-                  <textarea name="message" required></textarea>
-                </label>
-                <button class="btn btn--primary" type="submit">Send Message</button>
-                <div class="toast" data-form-toast role="status" aria-live="polite"></div>
+    <!-- Contact Section -->
+    <section class="contact-section section-padding">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper fade-in">
+            <div class="contact-form">
+              <h2>Send Us a Message</h2>
+              <p style="color: var(--gray-600); margin-bottom: var(--space-8);">Have a question or want to plan a visit? Fill out the form below and we'll get back to you soon.</p>
+              
+              <form action="#" method="POST">
+                <div class="form-group">
+                  <label for="name">Your Name *</label>
+                  <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                </div>
+                
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="Enter your phone number (optional)">
+                </div>
+                
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" placeholder="What is this regarding?">
+                </div>
+                
+                <div class="form-group">
+                  <label for="message">Your Message *</label>
+                  <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 20px; height: 20px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
+                  Send Message
+                </button>
               </form>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card__body stack">
-              <h2 class="card__title">Contact Details</h2>
-              <ul class="info-list">
-                <li>
-                  <strong>Email</strong>
-                  <a href="mailto:kbccmails2015@gmail.com">kbccmails2015@gmail.com</a>
-                </li>
-                <li>
-                  <strong>Address</strong>
-                  <span class="muted">4, Alhaji Yusuf Adebayo Street, Ibafon Bus Stop, Olodi Apapa, Lagos</span>
-                </li>
-                <li>
-                  <strong>Office Hours</strong>
-                  <span class="muted">Tuesday to Saturday • 9:00 AM – 5:00 PM</span>
-                </li>
-                <li>
-                  <strong>Service Times</strong>
-                  <span class="muted">Wednesdays • 6:00 PM • Sundays • 8:00 AM &amp; 10:00 AM</span>
-                </li>
-              </ul>
-
-              <div class="hero__actions">
-                <a
-                  class="btn btn--primary"
-                  href="https://www.google.com/maps?q=4%2C%20Alhaji%20Yusuf%20Adebayo%20Street%2C%20Olodi%20Apapa%2C%20Lagos&output=classic"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Get Directions
-                </a>
-                <a class="btn btn--secondary" href="events.html">See Events</a>
+              
+              <div class="form-success">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 24px; height: 24px; margin-right: 8px; vertical-align: middle;">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                Thank you! Your message has been sent successfully. We'll get back to you soon.
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="section section--tight">
-        <div class="container grid grid--2">
-          <div class="card">
-            <div class="card__body stack">
-              <h2 class="card__title">Map</h2>
-              <p class="muted" style="margin: 0">Find us at The Answer City, Olodi Apapa, Lagos.</p>
-              <div class="card" style="overflow: hidden; border-radius: var(--radius-md)">
-                <iframe
-                  title="KBCC location on Google Maps"
-                  loading="lazy"
-                  style="width: 100%; aspect-ratio: 16 / 10; border: 0"
-                  src="https://www.google.com/maps?q=4%2C%20Alhaji%20Yusuf%20Adebayo%20Street%2C%20Olodi%20Apapa%2C%20Lagos&output=embed"
-                ></iframe>
+          
+          <!-- Contact Info -->
+          <div class="contact-info-wrapper fade-in">
+            <h2>Get In Touch</h2>
+            
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+                <div class="contact-info-content">
+                  <h4>Our Location</h4>
+                  <p>The Answer City<br>4, Alhaji Yusuf Adebayo Street,<br>Ibafon Bus Stop, Olodi Apapa, Lagos</p>
+                </div>
+              </div>
+              
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+                <div class="contact-info-content">
+                  <h4>Email Us</h4>
+                  <p><a href="mailto:kbccmails2015@gmail.com">kbccmails2015@gmail.com</a></p>
+                </div>
+              </div>
+              
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div class="contact-info-content">
+                  <h4>Office Hours</h4>
+                  <p>Tuesday to Saturday<br>9:00 AM – 5:00 PM</p>
+                </div>
+              </div>
+              
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                  </svg>
+                </div>
+                <div class="contact-info-content">
+                  <h4>Service Times</h4>
+                  <p>Sunday: 8:00 AM & 10:00 AM<br>Wednesday: 6:00 PM</p>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div class="card">
-            <div class="card__body stack">
-              <h2 class="card__title">Social &amp; Audio Messages</h2>
-              <p style="margin: 0">
-                Follow KBCC and listen to audio messages on Telegram.
-              </p>
-              <div class="grid grid--2">
-                <a class="btn btn--ghost" href="https://www.facebook.com/kingdomofbelieversministry" target="_blank" rel="noopener noreferrer">Facebook</a>
-                <a class="btn btn--ghost" href="https://youtube.com/@kingdomofbelieverschristia7222?si=B9MEr1Zn2S5dr3TB" target="_blank" rel="noopener noreferrer">YouTube</a>
-                <a class="btn btn--ghost" href="https://www.instagram.com/kbcc_headquarters?igsh=eHFsanEzYzFlaTli" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a class="btn btn--primary" data-telegram href="#">Telegram (Audio)</a>
-              </div>
+            
+            <a href="https://maps.google.com/?q=4+Alhaji+Yusuf+Adebayo+Street+Olodi+Apapa+Lagos" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-bottom: var(--space-8);">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 20px; height: 20px;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+              </svg>
+              Get Directions
+            </a>
+            
+            <div class="contact-map">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.0!2d3.3!3d6.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjcnMDAuMCJOIDPCsDE4JzAwLjAiRQ!5e0!3m2!1sen!2sng!4v1600000000000!5m2!1sen!2sng" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="KBCC Location Map">
+              </iframe>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer">
-        <div class="footer__grid">
-          <div class="footer__brand">
-            <img src="images/logo.jpg" alt="KBCC logo" />
-            <div>
-              <h3>KBCC</h3>
-              <p class="muted" style="margin: 6px 0 0; color: rgba(255, 255, 255, 0.78)">
-                Welcome home — we’re glad you’re here.
-              </p>
-            </div>
-          </div>
-          <div class="footer__cols">
-            <div>
-              <h4>Quick Links</h4>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="leadership.html">Leadership</a></li>
-                <li><a href="sermons.html">Sermons</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="media.html">Media</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4>Contact</h4>
-              <ul>
-                <li><a href="mailto:kbccmails2015@gmail.com">kbccmails2015@gmail.com</a></li>
-                <li><a data-telegram href="#">Telegram (Audio)</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer__bottom">
-          <span>© <span id="year"></span> Kingdom of Believers Christian Centre (KBCC)</span>
-          <span class="muted" style="color: rgba(255, 255, 255, 0.72)">Contact</span>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-    <script src="js/main.js" defer></script>
-  </body>
+    <!-- Connect Section -->
+    <section class="connect-section section-padding">
+      <div class="container">
+        <h2 class="fade-in">Connect With Us Online</h2>
+        <p class="fade-in">Follow us on social media and join The Answer Nation community.</p>
+        <div class="social-links fade-in">
+          <a href="https://www.facebook.com/kingdomofbelieversministry" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://youtube.com/@kingdomofbelieverschristia7222" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/kbcc_headquarters" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://t.me/TheAnswerNation" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Telegram">
+            <svg fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.jpg" alt="KBCC Logo">
+          <p>Kingdom of Believers Christian Centre — Raising men and women who will be Answers in the society.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/kingdomofbelieversministry" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="https://youtube.com/@kingdomofbelieverschristia7222" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+            <a href="https://www.instagram.com/kbcc_headquarters" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="https://t.me/TheAnswerNation" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href="sermons.html">Sermons</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="media.html">Media</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Service Times</h4>
+          <ul>
+            <li>Sunday First Service: 8:00 AM</li>
+            <li>Sunday Second Service: 10:00 AM</li>
+            <li>Midweek Service: Wed 6:00 PM</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact Us</h4>
+          <ul class="footer-contact">
+            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span>4, Alhaji Yusuf Adebayo Street, Ibafon Bus Stop, Olodi Apapa, Lagos</span></li>
+            <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><span>kbccmails2015@gmail.com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Kingdom of Believers Christian Centre. All rights reserved.</p>
+        <p>Est. 2015 | <a href="contact.html">Contact Us</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" aria-label="Scroll to top">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
 </html>
-
-

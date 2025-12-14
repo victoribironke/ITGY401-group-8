@@ -1,235 +1,514 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sermons and messages — watch video messages and listen to audio messages on Telegram." />
-    <title>Sermons — KBCC</title>
-    <link rel="icon" href="images/logo.jpg" />
+    <meta
+      name="description"
+      content="Watch and listen to sermons from KBCC. Access video messages on YouTube and Facebook, and audio messages on Telegram."
+    />
+    <title>Sermons & Messages - KBCC</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header class="site-header" data-nav>
-      <div class="container nav">
-        <a class="brand" href="index.html" aria-label="KBCC Home">
-          <img src="images/logo.jpg" alt="KBCC logo" />
-          <span class="brand__text">
-            <span class="brand__name">KBCC</span>
-            <span class="brand__tag">Kingdom of Believers Christian Centre</span>
-          </span>
+    <!-- Navigation -->
+    <header class="nav-wrapper scrolled">
+      <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+          <img src="images/logo.jpg" alt="KBCC Logo" />
         </a>
 
-        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu">
-          <span class="nav__toggle-lines" aria-hidden="true"><span></span></span>
-          <span class="sr-only">Menu</span>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+          <li><a href="sermons.html" class="nav-link active">Sermons</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li><a href="media.html" class="nav-link">Media</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-cta">
+            <a href="contact.html" class="btn btn-primary">Plan a Visit</a>
+          </li>
+        </ul>
+
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
-
-        <nav id="site-menu" class="nav__links" data-nav-menu aria-label="Primary">
-          <a href="index.html" data-nav-link="true">Home</a>
-          <a href="about.html" data-nav-link="true">About</a>
-          <a href="leadership.html" data-nav-link="true">Leadership</a>
-          <a href="sermons.html" data-nav-link="true">Sermons</a>
-          <a href="events.html" data-nav-link="true">Events</a>
-          <a href="media.html" data-nav-link="true">Media</a>
-          <a href="contact.html" data-nav-link="true">Contact</a>
-        </nav>
-
-        <div class="nav__cta">
-          <a class="btn btn--primary btn--small" data-telegram href="#">Listen on Telegram</a>
-        </div>
-      </div>
+      </nav>
+      <div class="mobile-overlay"></div>
     </header>
 
-    <main id="main">
-      <section class="page-hero">
-        <div class="container">
-          <h1>Sermons &amp; Messages</h1>
-          <p>
-            Be strengthened by the Word. Watch video messages and access audio messages on Telegram.
-          </p>
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- Page Hero -->
+      <section
+        class="page-hero"
+        style="background-image: url('images/15.jpeg')"
+      >
+        <div class="page-hero-content">
+          <h1>Sermons & Messages</h1>
+          <p>Access life-changing teachings from KBCC wherever you are.</p>
         </div>
       </section>
 
-      <section class="section">
-        <div class="container stack">
-          <h2 class="section-title">Video Messages</h2>
-          <p class="section-kicker">
-            Watch messages via YouTube and Facebook. (You can also open the channels directly.)
-          </p>
+      <!-- Featured Sermon -->
+      <section class="sermons-section section-padding">
+        <div class="container">
+          <div class="section-header fade-in">
+            <span class="eyebrow">Featured Message</span>
+            <h2>Latest Sermon</h2>
+          </div>
 
-          <div class="grid grid--2">
-            <article class="card">
-              <div class="card__body stack">
-                <h3 class="card__title">YouTube — Latest Uploads</h3>
-                <p class="muted" style="margin: 0">
-                  Embedded channel feed (opens in-page). If it doesn’t load on a device/network,
-                  use the button below.
-                </p>
-                <div class="card" style="overflow: hidden; border-radius: var(--radius-md)">
-                  <iframe
-                    title="KBCC YouTube uploads"
-                    style="width: 100%; aspect-ratio: 16 / 9; border: 0"
-                    loading="lazy"
-                    src="https://www.youtube.com/embed?listType=user&list=kingdomofbelieverschristia7222"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="hero__actions">
-                  <a
-                    class="btn btn--secondary"
-                    href="https://youtube.com/@kingdomofbelieverschristia7222?si=B9MEr1Zn2S5dr3TB"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Open YouTube Channel
-                  </a>
-                </div>
+          <div class="featured-sermon fade-in">
+            <div class="featured-sermon-inner">
+              <div class="featured-sermon-video">
+                <img src="images/16.jpeg" alt="The Name of Jesus sermon" />
+                <a
+                  href="https://youtube.com/@kingdomofbelieverschristia7222"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="sermon-play-btn"
+                  aria-label="Watch on YouTube"
+                >
+                  <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </a>
               </div>
-            </article>
-
-            <article class="card">
-              <div class="card__body stack">
-                <h3 class="card__title">Featured Message</h3>
-                <p style="margin: 0"><strong>The Name of Jesus (Part 1)</strong> — Pastor Gbenga Olusanya (PGO)</p>
-                <p class="muted" style="margin: 0">
-                  The Name of Jesus carries authority in heaven, on earth, and beneath the earth—activating healing,
-                  deliverance, and answered prayers through faith.
+              <div class="featured-sermon-content">
+                <span class="eyebrow">Now Available</span>
+                <h2>The Name of Jesus (Part 1)</h2>
+                <p class="sermon-meta">
+                  <span>Pastor Gbenga Olusanya</span>
                 </p>
-                <div class="hero__actions">
+                <p>
+                  The name of Jesus is not just a title; it is the greatest
+                  spiritual force ever given to humanity. In this first part of
+                  the teaching, Pastor Gbenga unveils the depth, weight, and
+                  glory wrapped inside the name that God Himself exalted above
+                  every other name (Philippians 2:9–11).
+                </p>
+                <p>
+                  You will discover that the name of Jesus carries absolute
+                  authority in heaven, on earth, and beneath the earth—meaning
+                  no situation, power, or contention is beyond its reach.
+                </p>
+
+                <h4
+                  style="
+                    margin-top: var(--space-6);
+                    margin-bottom: var(--space-3);
+                    color: var(--navy-800);
+                  "
+                >
+                  Key Takeaways:
+                </h4>
+                <ul
+                  style="color: var(--gray-600); margin-bottom: var(--space-6)"
+                >
+                  <li style="margin-bottom: var(--space-2)">
+                    • Why the name of Jesus is every believer's highest
+                    possession
+                  </li>
+                  <li style="margin-bottom: var(--space-2)">
+                    • What makes this name equal to the presence, honour, and
+                    dominion of Christ
+                  </li>
+                  <li style="margin-bottom: var(--space-2)">
+                    • How healing, deliverance, miracles flow through this name
+                  </li>
+                  <li style="margin-bottom: var(--space-2)">
+                    • How to activate healing and deliverance by faith in the
+                    name
+                  </li>
+                </ul>
+
+                <div class="sermon-buttons">
                   <a
-                    class="btn btn--secondary"
-                    href="https://youtube.com/@kingdomofbelieverschristia7222?si=B9MEr1Zn2S5dr3TB"
+                    href="https://youtube.com/@kingdomofbelieverschristia7222"
                     target="_blank"
                     rel="noopener noreferrer"
+                    class="btn btn-primary"
                   >
+                    <svg
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      style="width: 20px; height: 20px"
+                    >
+                      <path
+                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                      />
+                    </svg>
                     Watch on YouTube
                   </a>
                   <a
-                    class="btn btn--ghost"
                     href="https://www.facebook.com/kingdomofbelieversministry"
                     target="_blank"
                     rel="noopener noreferrer"
+                    class="btn btn-outline"
                   >
+                    <svg
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      style="width: 20px; height: 20px"
+                    >
+                      <path
+                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                      />
+                    </svg>
                     Watch on Facebook
                   </a>
                 </div>
-                <div class="card" style="overflow: hidden; border-radius: var(--radius-md)">
-                  <iframe
-                    title="KBCC Facebook page"
-                    style="width: 100%; aspect-ratio: 16 / 9; border: 0"
-                    loading="lazy"
-                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fkingdomofbelieversministry&tabs=timeline&width=500&height=320&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true"
-                  ></iframe>
-                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sermon Series Grid -->
+          <div
+            class="section-header fade-in"
+            style="margin-top: var(--space-20)"
+          >
+            <span class="eyebrow">More Messages</span>
+            <h2>Sermon Series</h2>
+            <p>
+              Browse our collection of teachings to grow in faith and knowledge.
+            </p>
+          </div>
+
+          <div class="sermon-series-grid">
+            <article class="sermon-card fade-in">
+              <div class="sermon-card-image">
+                <img src="images/17.jpeg" alt="Faith Series" />
+              </div>
+              <div class="sermon-card-content">
+                <h3>Walking by Faith</h3>
+                <p>
+                  A powerful series on activating your faith for supernatural
+                  results.
+                </p>
+                <a
+                  href="https://youtube.com/@kingdomofbelieverschristia7222"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-outline"
+                  style="width: 100%"
+                  >Watch Series</a
+                >
+              </div>
+            </article>
+
+            <article class="sermon-card fade-in">
+              <div class="sermon-card-image">
+                <img src="images/18.jpeg" alt="Kingdom Living" />
+              </div>
+              <div class="sermon-card-content">
+                <h3>Kingdom Living</h3>
+                <p>
+                  Discover how to live the Kingdom lifestyle and become an
+                  Answer.
+                </p>
+                <a
+                  href="https://youtube.com/@kingdomofbelieverschristia7222"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-outline"
+                  style="width: 100%"
+                  >Watch Series</a
+                >
+              </div>
+            </article>
+
+            <article class="sermon-card fade-in">
+              <div class="sermon-card-image">
+                <img src="images/19.jpeg" alt="The Holy Spirit" />
+              </div>
+              <div class="sermon-card-content">
+                <h3>The Holy Spirit</h3>
+                <p>
+                  Understanding the person, power, and gifts of the Holy Spirit.
+                </p>
+                <a
+                  href="https://youtube.com/@kingdomofbelieverschristia7222"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-outline"
+                  style="width: 100%"
+                  >Watch Series</a
+                >
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section section--tight">
-        <div class="container grid grid--2">
-          <div class="card">
-            <div class="card__body stack">
-              <h2 class="card__title">Audio Messages</h2>
-              <p style="margin: 0">
-                Audio sermons are hosted on Telegram. Tap the button below to listen (opens in a new tab).
-              </p>
-              <div class="hero__actions">
-                <a class="btn btn--primary" data-telegram href="#">
-                  Listen on Telegram
-                </a>
-                <a class="btn btn--ghost" href="media.html">View Media Gallery</a>
-              </div>
-              <p class="form-note">
-                Note: A QR code may also be shared in church for quick access.
-              </p>
-            </div>
+      <!-- Audio Messages Section -->
+      <section class="audio-section section-padding">
+        <div class="container">
+          <div class="fade-in">
+            <span class="eyebrow" style="color: var(--gold-400)"
+              >Audio Messages</span
+            >
+            <h2>Listen on Telegram</h2>
+            <p>
+              Access our complete library of audio sermons and teachings on The
+              Answer Nation Telegram channel. Listen on the go and be blessed by
+              the Word!
+            </p>
+            <a
+              href="https://t.me/TheAnswerNation"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="telegram-btn"
+            >
+              <svg fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+                />
+              </svg>
+              Listen on Telegram
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video Channels -->
+      <section class="section-padding" style="background-color: var(--gray-50)">
+        <div class="container">
+          <div class="section-header fade-in">
+            <span class="eyebrow">Watch Anytime</span>
+            <h2>Our Video Channels</h2>
+            <p>
+              Subscribe to stay updated with the latest messages and teachings.
+            </p>
           </div>
 
-          <div class="card">
-            <div class="card__body stack">
-              <h2 class="card__title">Stay Connected</h2>
-              <p class="muted" style="margin: 0">Follow KBCC online for messages, clips, and event updates.</p>
-              <ul class="info-list">
-                <li>
-                  <strong>YouTube</strong>
-                  <a href="https://youtube.com/@kingdomofbelieverschristia7222?si=B9MEr1Zn2S5dr3TB" target="_blank" rel="noopener noreferrer">Watch video messages</a>
-                </li>
-                <li>
-                  <strong>Facebook</strong>
-                  <a href="https://www.facebook.com/kingdomofbelieversministry" target="_blank" rel="noopener noreferrer">Livestreams and updates</a>
-                </li>
-                <li>
-                  <strong>Telegram</strong>
-                  <a data-telegram href="#">Audio messages</a>
-                </li>
-              </ul>
-            </div>
+          <div
+            class="services-grid"
+            style="
+              max-width: 800px;
+              margin: 0 auto;
+              grid-template-columns: repeat(2, 1fr);
+            "
+          >
+            <a
+              href="https://youtube.com/@kingdomofbelieverschristia7222"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="service-card fade-in"
+              style="text-decoration: none"
+            >
+              <div
+                class="service-icon"
+                style="background-color: rgba(255, 0, 0, 0.1)"
+              >
+                <svg
+                  fill="#FF0000"
+                  viewBox="0 0 24 24"
+                  style="width: 36px; height: 36px"
+                >
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                  />
+                </svg>
+              </div>
+              <h3>YouTube</h3>
+              <p style="margin: 0">
+                Watch our latest video sermons, worship sessions, and special
+                events.
+              </p>
+            </a>
+
+            <a
+              href="https://www.facebook.com/kingdomofbelieversministry"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="service-card fade-in"
+              style="text-decoration: none"
+            >
+              <div
+                class="service-icon"
+                style="background-color: rgba(24, 119, 242, 0.1)"
+              >
+                <svg
+                  fill="#1877F2"
+                  viewBox="0 0 24 24"
+                  style="width: 36px; height: 36px"
+                >
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </div>
+              <h3>Facebook</h3>
+              <p style="margin: 0">
+                Join our Facebook community for live services and daily
+                inspiration.
+              </p>
+            </a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer">
-        <div class="footer__grid">
-          <div class="footer__brand">
-            <img src="images/logo.jpg" alt="KBCC logo" />
-            <div>
-              <h3>KBCC</h3>
-              <p class="muted" style="margin: 6px 0 0; color: rgba(255, 255, 255, 0.78)">
-                Watch, listen, and grow through the Word.
-              </p>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="images/logo.jpg" alt="KBCC Logo" />
+            <p>
+              Kingdom of Believers Christian Centre — Raising men and women who
+              will be Answers in the society.
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://www.facebook.com/kingdomofbelieversministry"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://youtube.com/@kingdomofbelieverschristia7222"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+              >
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/kbcc_headquarters"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://t.me/TheAnswerNation"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Telegram"
+              >
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+                  />
+                </svg>
+              </a>
             </div>
           </div>
-          <div class="footer__cols">
-            <div>
-              <h4>Quick Links</h4>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="media.html">Media</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4>Audio Messages</h4>
-              <ul>
-                <li><a data-telegram href="#">Listen on Telegram</a></li>
-              </ul>
-              <hr class="divider" />
-              <h4>Video</h4>
-              <ul>
-                <li><a href="https://youtube.com/@kingdomofbelieverschristia7222?si=B9MEr1Zn2S5dr3TB" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-                <li><a href="https://www.facebook.com/kingdomofbelieversministry" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-              </ul>
-            </div>
+
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="leadership.html">Leadership</a></li>
+              <li><a href="sermons.html">Sermons</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="media.html">Media</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Service Times</h4>
+            <ul>
+              <li>Sunday First Service: 8:00 AM</li>
+              <li>Sunday Second Service: 10:00 AM</li>
+              <li>Midweek Service: Wed 6:00 PM</li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Contact Us</h4>
+            <ul class="footer-contact">
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+                <span
+                  >4, Alhaji Yusuf Adebayo Street, Ibafon Bus Stop, Olodi Apapa,
+                  Lagos</span
+                >
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                <span>kbccmails2015@gmail.com</span>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div class="footer__bottom">
-          <span>© <span id="year"></span> Kingdom of Believers Christian Centre (KBCC)</span>
-          <span class="muted" style="color: rgba(255, 255, 255, 0.72)">Sermons</span>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 Kingdom of Believers Christian Centre. All rights
+            reserved.
+          </p>
+          <p>Est. 2015 | <a href="contact.html">Contact Us</a></p>
         </div>
       </div>
     </footer>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-    <script src="js/main.js" defer></script>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" aria-label="Scroll to top">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 10l7-7m0 0l7 7m-7-7v18"
+        />
+      </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
   </body>
 </html>
-
-

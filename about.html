@@ -1,341 +1,778 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="About KBCC — Vision, mission, core values, statement of faith, and history." />
-    <title>About — KBCC</title>
-    <link rel="icon" href="images/logo.jpg" />
+    <meta
+      name="description"
+      content="Learn about KBCC's vision, mission, core values, and history. Discover what we believe and how we're raising Answers in the society."
+    />
+    <title>About Us - KBCC</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <header class="site-header" data-nav>
-      <div class="container nav">
-        <a class="brand" href="index.html" aria-label="KBCC Home">
-          <img src="images/logo.jpg" alt="KBCC logo" />
-          <span class="brand__text">
-            <span class="brand__name">KBCC</span>
-            <span class="brand__tag">Kingdom of Believers Christian Centre</span>
-          </span>
+    <!-- Navigation -->
+    <header class="nav-wrapper scrolled">
+      <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+          <img src="images/logo.jpg" alt="KBCC Logo" />
         </a>
 
-        <button
-          class="nav__toggle"
-          type="button"
-          data-nav-toggle
-          aria-expanded="false"
-          aria-controls="site-menu"
-        >
-          <span class="nav__toggle-lines" aria-hidden="true"><span></span></span>
-          <span class="sr-only">Menu</span>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+          <li><a href="sermons.html" class="nav-link">Sermons</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li><a href="media.html" class="nav-link">Media</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-cta">
+            <a href="contact.html" class="btn btn-primary">Plan a Visit</a>
+          </li>
+        </ul>
+
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
-
-        <nav id="site-menu" class="nav__links" data-nav-menu aria-label="Primary">
-          <a href="index.html" data-nav-link="true">Home</a>
-          <a href="about.html" data-nav-link="true">About</a>
-          <a href="leadership.html" data-nav-link="true">Leadership</a>
-          <a href="sermons.html" data-nav-link="true">Sermons</a>
-          <a href="events.html" data-nav-link="true">Events</a>
-          <a href="media.html" data-nav-link="true">Media</a>
-          <a href="contact.html" data-nav-link="true">Contact</a>
-        </nav>
-
-        <div class="nav__cta">
-          <a class="btn btn--primary btn--small" href="contact.html#plan">Plan a Visit</a>
-        </div>
-      </div>
+      </nav>
+      <div class="mobile-overlay"></div>
     </header>
 
-    <main id="main">
-      <section class="page-hero">
-        <div class="container">
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- Page Hero -->
+      <section
+        class="page-hero"
+        style="background-image: url('images/11.jpeg')"
+      >
+        <div class="page-hero-content">
           <h1>About KBCC</h1>
           <p>
-            Kingdom of Believers Christian Centre (KBCC) exists to raise men and women who will be
-            Answers in the society—built by the Word, empowered by the Spirit, and expressed through
-            love and service.
+            Discover who we are, what we believe, and the vision that drives us.
           </p>
         </div>
       </section>
 
-      <section class="section">
-        <div class="container grid grid--2">
-          <div class="card">
-            <div class="card__body stack">
-              <h2 class="card__title">Our Vision</h2>
-              <p style="margin: 0">
-                Raising men and women who will be Answers in the society.
+      <!-- Vision & Mission -->
+      <section class="vision-mission section-padding">
+        <div class="container">
+          <div class="vision-mission-grid">
+            <div class="vision-card fade-in">
+              <h2>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                  />
+                </svg>
+                Our Vision
+              </h2>
+              <p>
+                <strong
+                  >Raising men and women who will be Answers in the
+                  society.</strong
+                >
               </p>
-              <p class="muted" style="margin: 0">
-                We build a people who reflect the life, wisdom, power, and character of Christ—who
-                shine as light, provide solutions, and influence their world for God’s glory.
+              <p>
+                At Kingdom of Believers Christian Centre (KBCC), our vision is
+                to build a people who reflect the life, wisdom, power, and
+                character of Christ—men and women who provide solutions, shine
+                as light, and influence their world for God's glory.
               </p>
             </div>
-          </div>
-          <div class="card">
-            <div class="card__body stack">
-              <h2 class="card__title">Our Mission</h2>
-              <p style="margin: 0">
-                We are committed to gathering the unsaved through intentional evangelism and
-                transforming them by the Word and the Spirit until they become Answers in the
-                society.
+
+            <div class="mission-card fade-in">
+              <h2>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+                Our Mission
+              </h2>
+              <p>
+                We are committed to gathering the unsaved through intentional
+                evangelism and transforming them by the Word and the Spirit
+                until they become Answers in the society.
               </p>
-              <ul class="info-list" aria-label="Mission expressions">
-                <li>Passionate soul winning and community outreach</li>
-                <li>Spirit-filled worship and sound teaching of God’s Word</li>
-                <li>Discipleship that builds character, purpose, and maturity</li>
-                <li>Empowering believers to live out identity in Christ</li>
-                <li>Raising believers who walk in excellence, love, power, and responsibility</li>
-              </ul>
+              <p>
+                We accomplish this through passionate soul winning,
+                Spirit-filled worship, sound teaching, and empowering believers
+                to live out their identity in Christ.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section section--tight">
-        <div class="container stack">
-          <h2 class="section-title">Our Core Values</h2>
-          <p class="section-kicker">
-            These values shape our culture, our discipleship, and how we serve one another and our
-            city.
-          </p>
-          <div class="grid grid--3">
-            <article class="card"><div class="card__body"><h3 class="card__title">Righteousness</h3><p class="muted" style="margin:0">Purity, integrity, and obedience to God’s Word.</p></div></article>
-            <article class="card"><div class="card__body"><h3 class="card__title">Discipleship</h3><p class="muted" style="margin:0">Building transformed believers until Christ is formed.</p></div></article>
-            <article class="card"><div class="card__body"><h3 class="card__title">Love</h3><p class="muted" style="margin:0">The culture of our house and atmosphere for healing.</p></div></article>
-            <article class="card"><div class="card__body"><h3 class="card__title">Faith</h3><p class="muted" style="margin:0">Believing God’s Word and expecting supernatural results.</p></div></article>
-            <article class="card"><div class="card__body"><h3 class="card__title">Discipline</h3><p class="muted" style="margin:0">Sustained greatness through consistent spiritual habits.</p></div></article>
-            <article class="card"><div class="card__body"><h3 class="card__title">Evangelism</h3><p class="muted" style="margin:0">Reaching the lost and expanding God’s kingdom.</p></div></article>
-            <article class="card"><div class="card__body"><h3 class="card__title">Responsibility</h3><p class="muted" style="margin:0">Ownership of God’s work and meaningful contribution.</p></div></article>
-            <article class="card"><div class="card__body"><h3 class="card__title">Excellence</h3><p class="muted" style="margin:0">Serving God and humanity with our best.</p></div></article>
-            <article class="card"><div class="card__body"><h3 class="card__title">The Supernatural</h3><p class="muted" style="margin:0">Miracles, signs, wonders—the Spirit’s power at work.</p></div></article>
-            <article class="card"><div class="card__body"><h3 class="card__title">Diligence</h3><p class="muted" style="margin:0">Wholehearted commitment that produces lasting honour.</p></div></article>
+      <!-- Core Values -->
+      <section class="values-section section-padding">
+        <div class="container">
+          <div class="section-header fade-in">
+            <span class="eyebrow">What Guides Us</span>
+            <h2>Our Core Values</h2>
+            <p>These ten values shape who we are and how we serve.</p>
+          </div>
+
+          <div class="values-grid">
+            <div class="value-card fade-in">
+              <span class="value-number">1</span>
+              <h3>Righteousness</h3>
+              <p>
+                We uphold a life of purity, integrity, and obedience to God's
+                Word. Righteousness is the foundation for spiritual authority
+                and fruitfulness.
+              </p>
+            </div>
+
+            <div class="value-card fade-in">
+              <span class="value-number">2</span>
+              <h3>Discipleship</h3>
+              <p>
+                We are committed to building transformed believers through
+                teaching, mentorship, and intentional spiritual growth—until
+                Christ is fully formed in every member.
+              </p>
+            </div>
+
+            <div class="value-card fade-in">
+              <span class="value-number">3</span>
+              <h3>Love</h3>
+              <p>
+                We express the love of Christ in our relationships, service, and
+                outreach. Love is the culture of our house and the atmosphere in
+                which lives are healed.
+              </p>
+            </div>
+
+            <div class="value-card fade-in">
+              <span class="value-number">4</span>
+              <h3>Faith</h3>
+              <p>
+                We walk by faith and not by sight. We believe God's Word, act on
+                it, and expect supernatural results in every area of life.
+              </p>
+            </div>
+
+            <div class="value-card fade-in">
+              <span class="value-number">5</span>
+              <h3>Discipline</h3>
+              <p>
+                We cultivate spiritual and personal discipline—prayer, devotion,
+                stewardship, and excellence—because greatness is sustained by
+                consistent habits.
+              </p>
+            </div>
+
+            <div class="value-card fade-in">
+              <span class="value-number">6</span>
+              <h3>Evangelism</h3>
+              <p>
+                We passionately pursue souls for Christ. Reaching the lost and
+                expanding the kingdom is at the heart of our assignment.
+              </p>
+            </div>
+
+            <div class="value-card fade-in">
+              <span class="value-number">7</span>
+              <h3>Responsibility</h3>
+              <p>
+                We take responsibility for God's work, for one another, and for
+                our world. Every member is encouraged to be an Answer and
+                contribute meaningfully.
+              </p>
+            </div>
+
+            <div class="value-card fade-in">
+              <span class="value-number">8</span>
+              <h3>Excellence</h3>
+              <p>
+                We serve God and humanity with excellence in heart, conduct, and
+                execution—because God deserves our best always.
+              </p>
+            </div>
+
+            <div class="value-card fade-in">
+              <span class="value-number">9</span>
+              <h3>The Supernatural</h3>
+              <p>
+                We believe in the power of the Holy Spirit, miracles, signs, and
+                wonders. The supernatural is our heritage and our atmosphere.
+              </p>
+            </div>
+
+            <div class="value-card fade-in">
+              <span class="value-number">10</span>
+              <h3>Diligence</h3>
+              <p>
+                We commit ourselves wholeheartedly to the work of the kingdom,
+                knowing that diligence produces lasting impact and honour.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="container stack">
-          <h2 class="section-title">Statement of Faith</h2>
-          <p class="section-kicker">What we believe—grounded in the truth of God’s Word and the finished work of Jesus Christ.</p>
+      <!-- Statement of Faith -->
+      <section class="faith-section section-padding">
+        <div class="container">
+          <div class="section-header fade-in">
+            <span class="eyebrow">What We Believe</span>
+            <h2>Statement of Faith</h2>
+            <p>
+              At KBCC, our faith is built on the unshakable truth of God's Word
+              and the finished work of Jesus Christ.
+            </p>
+          </div>
 
-          <div class="accordion" data-accordion>
-            <details>
-              <summary>
-                1. The Scriptures
-                <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </summary>
-              <div class="accordion__content">
-                We believe the Bible is the inspired, infallible, and authoritative Word of God—the final rule for faith, doctrine, and life.
+          <div class="accordion">
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                <span>1. The Scriptures</span>
+                <svg
+                  class="accordion-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  We believe that the Bible is the inspired, infallible, and
+                  authoritative Word of God. It is the final rule for faith,
+                  doctrine, and life.
+                </p>
               </div>
-            </details>
-            <details>
-              <summary>
-                2. The Trinity
-                <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </summary>
-              <div class="accordion__content">
-                We believe in one God—Father, Son, and Holy Spirit—eternally existing in three distinct Persons, co-equal in power and glory.
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                <span>2. The Trinity</span>
+                <svg
+                  class="accordion-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  We believe in one God, Father, Son, and Holy Spirit, eternally
+                  existing in three distinct Persons, co-equal in power and
+                  glory.
+                </p>
               </div>
-            </details>
-            <details>
-              <summary>
-                3. Jesus Christ
-                <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </summary>
-              <div class="accordion__content">
-                We believe Jesus Christ is fully God and fully Man: His virgin birth, sinless life, miracles, sacrificial death, resurrection, ascension, and soon return. We believe the Name of Jesus carries all authority and has been given to believers as a rod of divine power.
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                <span>3. Jesus Christ</span>
+                <svg
+                  class="accordion-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  We believe that Jesus Christ is the Son of God, fully God and
+                  fully Man. We believe in His virgin birth, sinless life,
+                  miracles, sacrificial death, resurrection, ascension, and soon
+                  return. We believe that the Name of Jesus carries all
+                  authority in heaven, on earth, and beneath the earth, and has
+                  been given to believers as a rod of divine power.
+                </p>
               </div>
-            </details>
-            <details>
-              <summary>
-                4. Salvation
-                <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </summary>
-              <div class="accordion__content">
-                We believe salvation is by grace through faith in Jesus Christ alone; there is no other name under heaven by which men can be saved. We believe in repentance, forgiveness, and new birth by the Holy Spirit.
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                <span>4. Salvation</span>
+                <svg
+                  class="accordion-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  We believe that salvation is by grace through faith in Jesus
+                  Christ alone. There is no other name given under heaven by
+                  which men can be saved. We believe in repentance, forgiveness,
+                  and new birth through the power of the Holy Spirit.
+                </p>
               </div>
-            </details>
-            <details>
-              <summary>
-                5. The Holy Spirit
-                <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </summary>
-              <div class="accordion__content">
-                We believe in the person, presence, gifts, and power of the Holy Spirit—who empowers believers to live righteously, walk in the supernatural, and fulfill God’s purpose on earth.
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                <span>5. The Holy Spirit</span>
+                <svg
+                  class="accordion-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  We believe in the person, presence, gifts, and power of the
+                  Holy Spirit. We believe that He empowers believers to live
+                  righteously, walk in the supernatural, and fulfill God's
+                  purpose on the earth.
+                </p>
               </div>
-            </details>
-            <details>
-              <summary>
-                6. The Believer’s Authority
-                <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </summary>
-              <div class="accordion__content">
-                We believe every believer is called to walk in dominion through the Name of Jesus and that healing, deliverance, miracles, signs, and wonders are part of our inheritance.
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                <span>6. The Believer's Authority</span>
+                <svg
+                  class="accordion-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  We believe that every believer is called to walk in dominion
+                  through the Name of Jesus. We believe in healing, deliverance,
+                  miracles, signs, and wonders as part of the believer's
+                  inheritance.
+                </p>
               </div>
-            </details>
-            <details>
-              <summary>
-                7. The Church
-                <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </summary>
-              <div class="accordion__content">
-                We believe the Church is the Body of Christ, called to reveal God’s glory on earth. At KBCC, we are committed to raising Answers through discipleship, service, love, and excellence.
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                <span>7. The Church</span>
+                <svg
+                  class="accordion-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  We believe that the Church is the Body of Christ, called to
+                  reveal God's glory on the earth. At KBCC, we are committed to
+                  raising men and women who will be Answers in the society
+                  through discipleship, service, love, and excellence.
+                </p>
               </div>
-            </details>
-            <details>
-              <summary>
-                8. Evangelism &amp; Discipleship
-                <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </summary>
-              <div class="accordion__content">
-                We believe every believer is called to win souls, make disciples, and expand God’s kingdom through intentional outreach, follow-up, training, and community impact.
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                <span>8. Evangelism and Discipleship</span>
+                <svg
+                  class="accordion-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  We believe that every believer is called to win souls, make
+                  disciples, and expand God's kingdom. We uphold intentional
+                  outreach, follow-up, training, and community impact as core
+                  expressions of our mission.
+                </p>
               </div>
-            </details>
-            <details>
-              <summary>
-                9. Christian Living
-                <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </summary>
-              <div class="accordion__content">
-                We believe in living a life of righteousness, holiness, love, faith, diligence, and responsibility—and cultivating spiritual disciplines: prayer, the Word, worship, giving, and service.
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                <span>9. Christian Living</span>
+                <svg
+                  class="accordion-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  We believe in living a life of righteousness, holiness, love,
+                  faith, diligence, and responsibility. We believe in
+                  cultivating spiritual disciplines—prayer, the Word, worship,
+                  giving, and service.
+                </p>
               </div>
-            </details>
-            <details>
-              <summary>
-                10. Marriage &amp; Family
-                <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </summary>
-              <div class="accordion__content">
-                We believe marriage is God’s covenant institution between a man and a woman, and we uphold strong families as a foundation for godly societies and future generations.
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                <span>10. Marriage and Family</span>
+                <svg
+                  class="accordion-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  We believe that marriage is God's covenant institution between
+                  a man and a woman. We uphold strong families as a foundation
+                  for godly societies and future generations.
+                </p>
               </div>
-            </details>
-            <details>
-              <summary>
-                11. The Second Coming of Christ
-                <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </summary>
-              <div class="accordion__content">
-                We believe in the literal, visible, and soon return of our Lord Jesus Christ to gather His Church and reign forever.
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                <span>11. The Second Coming of Christ</span>
+                <svg
+                  class="accordion-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  We believe in the literal, visible, and soon return of our
+                  Lord Jesus Christ to gather His Church and reign forever.
+                </p>
               </div>
-            </details>
-            <details>
-              <summary>
-                12. Eternal Destiny
-                <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </summary>
-              <div class="accordion__content">
-                We believe in the resurrection of the righteous and the unrighteous: eternal life for believers and eternal separation from God for those who reject Christ.
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                <span>12. Eternal Destiny</span>
+                <svg
+                  class="accordion-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <p>
+                  We believe in the resurrection of the righteous and the
+                  unrighteous, eternal life for believers, and eternal
+                  separation from God for those who reject Christ.
+                </p>
               </div>
-            </details>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="container grid grid--2">
-          <div class="card">
-            <div class="card__body stack">
-              <h2 class="card__title">A Brief History</h2>
-              <p style="margin: 0">
-                The mandate of Kingdom of Believers Ministry was delivered by God to Pastor Gbenga
-                Olusanya on 9th May 2013 during a personal three-day dry fast.
-              </p>
-              <p class="muted" style="margin: 0">
-                In November 2014, Pastor Gbenga and his wife were officially prayed for and released
-                to pursue the divine mandate. KBCC was birthed and established on 1st February 2015,
-                immediately after a three-day crusade (29th–31st January 2015).
-              </p>
-              <p class="muted" style="margin: 0">
-                Since inception, KBCC has remained steadfast to its mandate: raising men and women
-                who are Answers in the society through the Word of Faith and impactful annual
-                programmes.
-              </p>
-            </div>
+      <!-- History -->
+      <section class="history-section section-padding">
+        <div class="container">
+          <div class="section-header fade-in">
+            <span class="eyebrow">Our Story</span>
+            <h2>A Brief History</h2>
           </div>
-          <div class="card">
-            <div class="card__body stack">
-              <h2 class="card__title">Want to Worship With Us?</h2>
-              <p style="margin: 0">
-                You are warmly invited to worship, grow, and find your place in the family of
-                Answers.
-              </p>
-              <ul class="info-list">
-                <li><strong>Address</strong><span class="muted">4, Alhaji Yusuf Adebayo Street, Ibafon Bus Stop, Olodi Apapa, Lagos</span></li>
-                <li><strong>Office Hours</strong><span class="muted">Tuesday to Saturday • 9:00 AM – 5:00 PM</span></li>
-              </ul>
-              <div class="hero__actions">
-                <a class="btn btn--primary" href="contact.html#plan">Plan a Visit</a>
-                <a class="btn btn--ghost" href="events.html">See Events</a>
-              </div>
-            </div>
+
+          <div class="history-content fade-in">
+            <p>
+              The mandate of Kingdom of Believers Ministry was delivered by God
+              to the Set Man, Pastor Gbenga Olusanya, on 9th May 2013 during a
+              personal three-day dry fast held from May 8th to 10th, 2013. In
+              that encounter, the Lord instructed him to raise a kingdom of
+              believers who live the Kingdom lifestyle and who serve as Answers
+              in the society.
+            </p>
+
+            <p>
+              At the time, Pastor Gbenga Olusanya was serving as a Traveling
+              Minister with the Redeemed Christian Church of God (RCCG). When
+              God called him into this new assignment, he informed his
+              supervising authority, Pastor E. A. Odeyemi, who insisted he would
+              not release him unless God confirmed it personally. After a season
+              of waiting, Pastor Odeyemi called him and affirmed that indeed,
+              "God has a special assignment for you." In November 2014, he and
+              his wife were officially prayed for and released to pursue the
+              divine mandate.
+            </p>
+
+            <p>
+              Following this release, Kingdom of Believers Christian Centre
+              (KBCC), the church arm of Kingdom of Believers Ministry was
+              birthed. The ministry was established on 1st February 2015,
+              immediately after a three-day crusade held from 29th to 31st
+              January 2015. Remarkably, God had specifically mentioned the exact
+              location where the work should begin, even though Pastor Gbenga
+              had never visited Ajeromi-Ifelodun Local Government before then.
+            </p>
+
+            <p>
+              Since inception, KBCC has remained steadfast to its divine
+              mandate: raising men and women who are Answers in the society.
+              Through consistent preaching and teaching of the Word of Faith,
+              and through impactful annual programmes such as the Believers'
+              Camp Meeting, Kingdom Life Conference, and the Easter Growth
+              Retreat, the ministry continues to shape destinies and build
+              believers who shine as solutions in their world.
+            </p>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer">
-        <div class="footer__grid">
-          <div class="footer__brand">
-            <img src="images/logo.jpg" alt="KBCC logo" />
-            <div>
-              <h3>KBCC</h3>
-              <p class="muted" style="margin: 6px 0 0; color: rgba(255, 255, 255, 0.78)">
-                Raising men and women who will be Answers in the society.
-              </p>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="images/logo.jpg" alt="KBCC Logo" />
+            <p>
+              Kingdom of Believers Christian Centre — Raising men and women who
+              will be Answers in the society.
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://www.facebook.com/kingdomofbelieversministry"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://youtube.com/@kingdomofbelieverschristia7222"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+              >
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/kbcc_headquarters"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://t.me/TheAnswerNation"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Telegram"
+              >
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+                  />
+                </svg>
+              </a>
             </div>
           </div>
-          <div class="footer__cols">
-            <div>
-              <h4>Quick Links</h4>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="leadership.html">Leadership</a></li>
-                <li><a href="sermons.html">Sermons</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="media.html">Media</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4>Social</h4>
-              <ul>
-                <li>
-                  <a href="https://www.facebook.com/kingdomofbelieversministry" target="_blank" rel="noopener noreferrer">Facebook</a>
-                </li>
-                <li>
-                  <a href="https://youtube.com/@kingdomofbelieverschristia7222?si=B9MEr1Zn2S5dr3TB" target="_blank" rel="noopener noreferrer">YouTube</a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com/kbcc_headquarters?igsh=eHFsanEzYzFlaTli" target="_blank" rel="noopener noreferrer">Instagram</a>
-                </li>
-                <li><a data-telegram href="#">Telegram (Audio)</a></li>
-              </ul>
-            </div>
+
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="leadership.html">Leadership</a></li>
+              <li><a href="sermons.html">Sermons</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="media.html">Media</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Service Times</h4>
+            <ul>
+              <li>Sunday First Service: 8:00 AM</li>
+              <li>Sunday Second Service: 10:00 AM</li>
+              <li>Midweek Service: Wed 6:00 PM</li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Contact Us</h4>
+            <ul class="footer-contact">
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+                <span
+                  >4, Alhaji Yusuf Adebayo Street, Ibafon Bus Stop, Olodi Apapa,
+                  Lagos</span
+                >
+              </li>
+              <li>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                <span>kbccmails2015@gmail.com</span>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div class="footer__bottom">
-          <span>© <span id="year"></span> Kingdom of Believers Christian Centre (KBCC)</span>
-          <span class="muted" style="color: rgba(255, 255, 255, 0.72)">About KBCC</span>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 Kingdom of Believers Christian Centre. All rights
+            reserved.
+          </p>
+          <p>Est. 2015 | <a href="contact.html">Contact Us</a></p>
         </div>
       </div>
     </footer>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-    <script src="js/main.js" defer></script>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" aria-label="Scroll to top">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 10l7-7m0 0l7 7m-7-7v18"
+        />
+      </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
   </body>
 </html>
-
-
