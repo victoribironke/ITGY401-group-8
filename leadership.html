@@ -1,224 +1,227 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leadership - KBCC</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
+    <meta name="description" content="KBCC leadership — Meet Pastor Gbenga Olusanya (PGO), Pastor Yemisi Olusanya (PYO), and the leadership team." />
+    <title>Leadership — KBCC</title>
+    <link rel="icon" href="images/logo.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="container">
-        <div class="nav-wrapper">
-          <a href="index.html" class="logo">
-            <img src="images/logo.jpg" alt="KBCC Logo" />
-            <span>KBCC</span>
-          </a>
-          <button class="mobile-toggle" id="mobileToggle">
-            <i class="fas fa-bars"></i>
-          </button>
-          <ul class="nav-menu" id="navMenu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="leadership.html" class="active">Leadership</a></li>
-            <li><a href="sermons.html">Sermons</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-nav>
+      <div class="container nav">
+        <a class="brand" href="index.html" aria-label="KBCC Home">
+          <img src="images/logo.jpg" alt="KBCC logo" />
+          <span class="brand__text">
+            <span class="brand__name">KBCC</span>
+            <span class="brand__tag">Kingdom of Believers Christian Centre</span>
+          </span>
+        </a>
+
+        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu">
+          <span class="nav__toggle-lines" aria-hidden="true"><span></span></span>
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <nav id="site-menu" class="nav__links" data-nav-menu aria-label="Primary">
+          <a href="index.html" data-nav-link="true">Home</a>
+          <a href="about.html" data-nav-link="true">About</a>
+          <a href="leadership.html" data-nav-link="true">Leadership</a>
+          <a href="sermons.html" data-nav-link="true">Sermons</a>
+          <a href="events.html" data-nav-link="true">Events</a>
+          <a href="media.html" data-nav-link="true">Media</a>
+          <a href="contact.html" data-nav-link="true">Contact</a>
+        </nav>
+
+        <div class="nav__cta">
+          <a class="btn btn--primary btn--small" href="contact.html#plan">Plan a Visit</a>
         </div>
       </div>
-    </nav>
+    </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-      <div class="container">
-        <h1>Our Leadership</h1>
-        <p>Meet the leaders God has appointed to shepherd His people</p>
-      </div>
-    </section>
-
-    <!-- Leadership Team -->
-    <section class="leadership-section">
-      <div class="container">
-        <!-- Lead Pastor -->
-        <div class="leader-profile">
-          <div class="leader-photo">
-            <div class="photo-placeholder">
-              <i class="fas fa-user"></i>
-            </div>
-          </div>
-          <div class="leader-info">
-            <h2>Pastor Gbenga Olusanya (PGO)</h2>
-            <p class="leader-title">
-              Lead Pastor, KBCC | President, Kingdom of Believers Ministry
-            </p>
-
-            <div class="leader-bio">
-              <p>
-                Pastor Gbenga Olusanya, fondly known as PGO, is the Lead Pastor
-                of Kingdom of Believers Christian Centre (KBCC), Lagos, and the
-                President of the Kingdom of Believers Ministry (KBM). He is also
-                the visionary founder of The Answer Nation (TAN)—an apostolic
-                movement committed to raising men and women who will be
-                "Answers" in their generation.
-              </p>
-
-              <p>
-                PGO is a man graced with remarkable multi-dimensional giftings.
-                He is an author of over sixteen titles, a Certified Life and
-                Relationship Coach, a songwriter, and the author of the
-                well-loved Daily Walk Devotional. Through his books, teachings,
-                and mentoring platforms, he consistently inspires believers to
-                live the kingdom lifestyle and become everything God has
-                ordained them to be.
-              </p>
-
-              <p>
-                A teacher of God's wisdom and a voice of clarity in the body of
-                Christ, PGO carries a unique mandate to help people engage
-                divine wisdom to solve real-life problems. His ministry is
-                marked by revelatory teaching, practical insights, and the
-                tangible manifestations of the Holy Spirit. He regularly speaks
-                in conferences, conventions, and seminars across Nigeria and
-                beyond.
-              </p>
-
-              <h4>Education & Qualifications</h4>
-              <ul>
-                <li>Accounting degree from Babcock University</li>
-                <li>Chartered Accountant (while still an undergraduate)</li>
-                <li>Principal, Kingdom of Believers Leadership Institute</li>
-                <li>Principal, School of Answers</li>
-                <li>Proprietor, King's Breed Academy</li>
-              </ul>
-
-              <h4>Family</h4>
-              <p>
-                He is joyfully married to Pastor Yemisi Olusanya (PYO), who
-                co-labours with him in ministry. Their union is blessed with
-                four biological children—Praise, Glory, Grace, and Beloved—and
-                numerous spiritual sons and daughters across the world.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <hr class="divider" />
-
-        <!-- Co-Lead Pastor -->
-        <div class="leader-profile">
-          <div class="leader-photo">
-            <div class="photo-placeholder">
-              <i class="fas fa-user"></i>
-            </div>
-          </div>
-          <div class="leader-info">
-            <h2>Pastor Yemisi Olusanya (PYO)</h2>
-            <p class="leader-title">Co-Lead Pastor, KBCC</p>
-
-            <div class="leader-bio">
-              <p>
-                Pastor Yemisi Olusanya (PYO) is the Co-Lead Pastor of the
-                Kingdom of Believers Christian Centre (KBCC), Lagos, where she
-                serves alongside her husband, Pastor Gbenga Olusanya (PGO). She
-                is a passionate minister of the gospel and a dynamic voice to
-                women, families, and especially children.
-              </p>
-
-              <h4>Ministry Focus</h4>
-              <p>
-                A trailblazer in children's ministry, PYO is a Children
-                Evangelist with a strong mandate to shape young lives through
-                the word of God. She is the convener and host of the impactful
-                weekly outreach, <strong>Kids Bible Club with PYO</strong>, a
-                platform through which she teaches children biblical truths in
-                simple, relatable, and life-transforming ways.
-              </p>
-
-              <h4>Educational Leadership</h4>
-              <p>
-                She is also the Proprietress of
-                <strong>King's Breed Academy (KBA)</strong>, a vision-driven
-                Christian school committed to raising a new generation of
-                leaders through excellence, character formation, and
-                Christ-centered education.
-              </p>
-
-              <p>
-                Known for her warmth, wisdom, and deep love for God's people,
-                PYO continues to inspire and disciple children, teenagers, and
-                families, helping them grow into the fullness of God's purpose
-                for their lives.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="cta-section">
-      <div class="container">
-        <h2>Want to Connect?</h2>
-        <p>We'd love to meet you and welcome you into the KBCC family</p>
-        <a href="contact.html" class="btn btn-primary">Contact Us</a>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-col">
-            <h4>Kingdom of Believers Christian Centre</h4>
-            <p>Raising men and women who will be Answers in the society.</p>
-            <p><strong>EST. 2003</strong></p>
-          </div>
-          <div class="footer-col">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="leadership.html">Leadership</a></li>
-              <li><a href="sermons.html">Sermons</a></li>
-              <li><a href="events.html">Events</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Contact Us</h4>
-            <p>
-              <i class="fas fa-map-marker-alt"></i> 4, Alhaji Yusuf Adebayo
-              Street, Olodi Apapa, Lagos
-            </p>
-            <p><i class="fas fa-envelope"></i> kbccmails2015@gmail.com</p>
-            <p><i class="fas fa-clock"></i> Tue-Sat: 9am - 5pm</p>
-          </div>
-          <div class="footer-col">
-            <h4>Service Times</h4>
-            <p><strong>Wednesday:</strong> 6:00 PM</p>
-            <p><strong>Sunday:</strong> 8:00 AM & 10:00 AM</p>
-          </div>
-        </div>
-        <div class="footer-bottom">
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <h1>Leadership</h1>
           <p>
-            &copy; 2025 Kingdom of Believers Christian Centre. All rights
-            reserved.
+            Meet our leaders—serving with love, excellence, and a passion to raise Answers in this
+            generation.
           </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container stack">
+          <h2 class="section-title">Lead Pastor</h2>
+          <div class="card">
+            <div class="card__body grid grid--2">
+              <img
+                src="images/5.jpeg"
+                alt="Pastor Gbenga Olusanya (PGO)"
+                style="border-radius: var(--radius-md); border: 1px solid var(--gray-200); object-fit: cover; width: 100%; height: 100%; min-height: 260px;"
+              />
+              <div class="stack">
+                <h3 class="card__title" style="margin: 0">Pastor Gbenga Olusanya (PGO)</h3>
+                <p class="muted" style="margin: 0">Lead Pastor, KBCC • President, Kingdom of Believers Ministry</p>
+                <p style="margin: 0">
+                  Pastor Gbenga Olusanya is the Lead Pastor of Kingdom of Believers Christian Centre
+                  (KBCC), Lagos, and the visionary founder of The Answer Nation (TAN)—an apostolic
+                  movement committed to raising men and women who will be “Answers” in their
+                  generation.
+                </p>
+                <p class="muted" style="margin: 0">
+                  He is an author of over sixteen titles, a Certified Life and Relationship Coach,
+                  a songwriter, and the author of the Daily Walk Devotional. His ministry is marked
+                  by revelatory teaching, practical insights, and the tangible manifestations of
+                  the Holy Spirit.
+                </p>
+                <p class="muted" style="margin: 0">
+                  He earned his accounting degree from Babcock University and became a Chartered
+                  Accountant while still an undergraduate—an early testament to discipline and
+                  excellence.
+                </p>
+                <div class="hero__actions">
+                  <a class="btn btn--secondary" href="sermons.html">Watch Messages</a>
+                  <a class="btn btn--primary" data-telegram href="#">Listen on Telegram</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container stack">
+          <h2 class="section-title">Co–Lead Pastor</h2>
+          <div class="card">
+            <div class="card__body grid grid--2">
+              <img
+                src="images/6.jpeg"
+                alt="Pastor Yemisi Olusanya (PYO)"
+                style="border-radius: var(--radius-md); border: 1px solid var(--gray-200); object-fit: cover; width: 100%; height: 100%; min-height: 260px;"
+              />
+              <div class="stack">
+                <h3 class="card__title" style="margin: 0">Pastor Yemisi Olusanya (PYO)</h3>
+                <p class="muted" style="margin: 0">Co–Lead Pastor, KBCC • Children Evangelist</p>
+                <p style="margin: 0">
+                  Pastor Yemisi Olusanya serves alongside her husband as Co–Lead Pastor of KBCC. She
+                  is a passionate minister of the gospel with a dynamic voice to women, families,
+                  and especially children.
+                </p>
+                <p class="muted" style="margin: 0">
+                  She is the convener and host of Kids Bible Club with PYO—teaching children biblical
+                  truths in simple, relatable, life-transforming ways. She is also the Proprietress
+                  of King’s Breed Academy (KBA), a Christ-centered school raising a new generation of
+                  leaders.
+                </p>
+                <div class="hero__actions">
+                  <a class="btn btn--ghost" href="contact.html">Get in Touch</a>
+                  <a class="btn btn--primary" href="events.html">See Events</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container stack">
+          <h2 class="section-title">Leadership &amp; Staff</h2>
+          <p class="section-kicker">
+            A dedicated team serving our church family. (Photos use the available media images.)
+          </p>
+          <div class="grid grid--3">
+            <article class="card">
+              <div class="card__body stack">
+                <img src="images/7.jpeg" alt="Leadership team member" style="border-radius: 14px; border: 1px solid var(--gray-200); height: 220px; object-fit: cover;" />
+                <h3 class="card__title">Ministry Coordinator</h3>
+                <p class="muted" style="margin: 0">Service &amp; operations</p>
+                <p style="margin: 0">Supports weekly services and coordinates volunteers with excellence and care.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__body stack">
+                <img src="images/8.jpeg" alt="Leadership team member" style="border-radius: 14px; border: 1px solid var(--gray-200); height: 220px; object-fit: cover;" />
+                <h3 class="card__title">Worship Team Lead</h3>
+                <p class="muted" style="margin: 0">Worship &amp; music</p>
+                <p style="margin: 0">Helps create an atmosphere of heartfelt worship and reverence.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__body stack">
+                <img src="images/9.jpeg" alt="Leadership team member" style="border-radius: 14px; border: 1px solid var(--gray-200); height: 220px; object-fit: cover;" />
+                <h3 class="card__title">Follow-up &amp; Care</h3>
+                <p class="muted" style="margin: 0">New members &amp; support</p>
+                <p style="margin: 0">Ensures first-time guests and members feel welcomed, seen, and supported.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <img src="images/logo.jpg" alt="KBCC logo" />
+            <div>
+              <h3>KBCC</h3>
+              <p class="muted" style="margin: 6px 0 0; color: rgba(255, 255, 255, 0.78)">
+                A leadership family committed to raising Answers through the Word and the Spirit.
+              </p>
+            </div>
+          </div>
+          <div class="footer__cols">
+            <div>
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sermons.html">Sermons</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Social</h4>
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/kingdomofbelieversministry" target="_blank" rel="noopener noreferrer">Facebook</a>
+                </li>
+                <li>
+                  <a href="https://youtube.com/@kingdomofbelieverschristia7222?si=B9MEr1Zn2S5dr3TB" target="_blank" rel="noopener noreferrer">YouTube</a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/kbcc_headquarters?igsh=eHFsanEzYzFlaTli" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </li>
+                <li><a data-telegram href="#">Telegram (Audio)</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span>© <span id="year"></span> Kingdom of Believers Christian Centre (KBCC)</span>
+          <span class="muted" style="color: rgba(255, 255, 255, 0.72)">Leadership</span>
         </div>
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>
+
+

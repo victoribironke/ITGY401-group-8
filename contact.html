@@ -1,252 +1,212 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us - KBCC</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
+    <meta name="description" content="Contact KBCC — Send a message, find service times, office hours, and directions." />
+    <title>Contact — KBCC</title>
+    <link rel="icon" href="images/logo.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="container">
-        <div class="nav-wrapper">
-          <a href="index.html" class="logo">
-            <img src="images/logo.jpg" alt="KBCC Logo" />
-            <span>KBCC</span>
-          </a>
-          <button class="mobile-toggle" id="mobileToggle">
-            <i class="fas fa-bars"></i>
-          </button>
-          <ul class="nav-menu" id="navMenu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="leadership.html">Leadership</a></li>
-            <li><a href="sermons.html">Sermons</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-          </ul>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-nav>
+      <div class="container nav">
+        <a class="brand" href="index.html" aria-label="KBCC Home">
+          <img src="images/logo.jpg" alt="KBCC logo" />
+          <span class="brand__text">
+            <span class="brand__name">KBCC</span>
+            <span class="brand__tag">Kingdom of Believers Christian Centre</span>
+          </span>
+        </a>
+
+        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu">
+          <span class="nav__toggle-lines" aria-hidden="true"><span></span></span>
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <nav id="site-menu" class="nav__links" data-nav-menu aria-label="Primary">
+          <a href="index.html" data-nav-link="true">Home</a>
+          <a href="about.html" data-nav-link="true">About</a>
+          <a href="leadership.html" data-nav-link="true">Leadership</a>
+          <a href="sermons.html" data-nav-link="true">Sermons</a>
+          <a href="events.html" data-nav-link="true">Events</a>
+          <a href="media.html" data-nav-link="true">Media</a>
+          <a href="contact.html" data-nav-link="true">Contact</a>
+        </nav>
+
+        <div class="nav__cta">
+          <a class="btn btn--primary btn--small" data-telegram href="#">Audio on Telegram</a>
         </div>
       </div>
-    </nav>
+    </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-      <div class="container">
-        <h1>Contact Us</h1>
-        <p>We'd love to hear from you</p>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section">
-      <div class="container">
-        <div class="contact-wrapper">
-          <!-- Contact Form -->
-          <div class="contact-form-container">
-            <h2>Send Us a Message</h2>
-            <form id="contactForm" class="contact-form">
-              <div class="form-group">
-                <label for="name">Full Name *</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-
-              <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" />
-              </div>
-
-              <div class="form-group">
-                <label for="subject">Subject *</label>
-                <input type="text" id="subject" name="subject" required />
-              </div>
-
-              <div class="form-group">
-                <label for="message">Message *</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="6"
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary">
-                Send Message
-              </button>
-            </form>
-            <div id="formMessage" class="form-message"></div>
-          </div>
-
-          <!-- Contact Info -->
-          <div class="contact-info-container">
-            <h2>Get In Touch</h2>
-
-            <div class="contact-info-item">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div class="contact-details">
-                <h4>Address</h4>
-                <p>
-                  4, Alhaji Yusuf Adebayo Street<br />
-                  Coconut/Ibafon Bus Stop<br />
-                  Olodi Apapa, Lagos
-                </p>
-              </div>
-            </div>
-
-            <div class="contact-info-item">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="contact-details">
-                <h4>Email</h4>
-                <p>
-                  <a href="mailto:kbccmails2015@gmail.com"
-                    >kbccmails2015@gmail.com</a
-                  >
-                </p>
-              </div>
-            </div>
-
-            <div class="contact-info-item">
-              <div class="contact-icon">
-                <i class="fas fa-clock"></i>
-              </div>
-              <div class="contact-details">
-                <h4>Office Hours</h4>
-                <p>
-                  Tuesday - Saturday<br />
-                  9:00 AM - 5:00 PM
-                </p>
-              </div>
-            </div>
-
-            <div class="contact-info-item">
-              <div class="contact-icon">
-                <i class="fas fa-church"></i>
-              </div>
-              <div class="contact-details">
-                <h4>Service Times</h4>
-                <p>
-                  <strong>Wednesday:</strong> 6:00 PM<br />
-                  <strong>Sunday:</strong> 8:00 AM & 10:00 AM
-                </p>
-              </div>
-            </div>
-
-            <div class="social-links-contact">
-              <h4>Follow Us</h4>
-              <div class="social-icons">
-                <a
-                  href="https://www.facebook.com/kingdomofbelieversministry"
-                  target="_blank"
-                  title="Facebook"
-                >
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a
-                  href="https://youtube.com/@kingdomofbelieverschristia7222?si=B9MEr1Zn2S5dr3TB"
-                  target="_blank"
-                  title="YouTube"
-                >
-                  <i class="fab fa-youtube"></i>
-                </a>
-                <a
-                  href="https://www.instagram.com/kbcc_headquarters?igsh=eHFsanEzYzFlaTli"
-                  target="_blank"
-                  title="Instagram"
-                >
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Map Section -->
-    <section class="map-section">
-      <div class="container">
-        <h2 class="section-title">Find Us</h2>
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.6507434123456!2d3.359999!3d6.445999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjYnNDUuNiJOIDPCsDIxJzM2LjAiRQ!5e0!3m2!1sen!2sng!4v1234567890"
-            width="100%"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          >
-          </iframe>
-        </div>
-        <p class="map-note">
-          The Answer City - 4, Alhaji Yusuf Adebayo Street, Olodi Apapa, Lagos
-        </p>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-col">
-            <h4>Kingdom of Believers Christian Centre</h4>
-            <p>Raising men and women who will be Answers in the society.</p>
-            <p><strong>EST. 2003</strong></p>
-          </div>
-          <div class="footer-col">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="leadership.html">Leadership</a></li>
-              <li><a href="sermons.html">Sermons</a></li>
-              <li><a href="events.html">Events</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Contact Us</h4>
-            <p>
-              <i class="fas fa-map-marker-alt"></i> 4, Alhaji Yusuf Adebayo
-              Street, Olodi Apapa, Lagos
-            </p>
-            <p><i class="fas fa-envelope"></i> kbccmails2015@gmail.com</p>
-            <p><i class="fas fa-clock"></i> Tue-Sat: 9am - 5pm</p>
-          </div>
-          <div class="footer-col">
-            <h4>Service Times</h4>
-            <p><strong>Wednesday:</strong> 6:00 PM</p>
-            <p><strong>Sunday:</strong> 8:00 AM & 10:00 AM</p>
-          </div>
-        </div>
-        <div class="footer-bottom">
+    <main id="main">
+      <section class="page-hero" id="plan">
+        <div class="container">
+          <h1>Contact &amp; Plan a Visit</h1>
           <p>
-            &copy; 2025 Kingdom of Believers Christian Centre. All rights
-            reserved.
+            We’d love to hear from you. Send a message, or find directions and service times for your
+            first visit.
           </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid grid--2">
+          <div class="card">
+            <div class="card__body stack">
+              <h2 class="card__title">Send Us a Message</h2>
+              <p class="muted" style="margin: 0">
+                This form shows a confirmation message in your browser. (To deliver emails, connect
+                it to a backend later.)
+              </p>
+
+              <form data-contact-form>
+                <label>
+                  Name
+                  <input name="name" type="text" autocomplete="name" required />
+                </label>
+                <label>
+                  Email
+                  <input name="email" type="email" autocomplete="email" required />
+                </label>
+                <label>
+                  Message
+                  <textarea name="message" required></textarea>
+                </label>
+                <button class="btn btn--primary" type="submit">Send Message</button>
+                <div class="toast" data-form-toast role="status" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__body stack">
+              <h2 class="card__title">Contact Details</h2>
+              <ul class="info-list">
+                <li>
+                  <strong>Email</strong>
+                  <a href="mailto:kbccmails2015@gmail.com">kbccmails2015@gmail.com</a>
+                </li>
+                <li>
+                  <strong>Address</strong>
+                  <span class="muted">4, Alhaji Yusuf Adebayo Street, Ibafon Bus Stop, Olodi Apapa, Lagos</span>
+                </li>
+                <li>
+                  <strong>Office Hours</strong>
+                  <span class="muted">Tuesday to Saturday • 9:00 AM – 5:00 PM</span>
+                </li>
+                <li>
+                  <strong>Service Times</strong>
+                  <span class="muted">Wednesdays • 6:00 PM • Sundays • 8:00 AM &amp; 10:00 AM</span>
+                </li>
+              </ul>
+
+              <div class="hero__actions">
+                <a
+                  class="btn btn--primary"
+                  href="https://www.google.com/maps?q=4%2C%20Alhaji%20Yusuf%20Adebayo%20Street%2C%20Olodi%20Apapa%2C%20Lagos&output=classic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Get Directions
+                </a>
+                <a class="btn btn--secondary" href="events.html">See Events</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container grid grid--2">
+          <div class="card">
+            <div class="card__body stack">
+              <h2 class="card__title">Map</h2>
+              <p class="muted" style="margin: 0">Find us at The Answer City, Olodi Apapa, Lagos.</p>
+              <div class="card" style="overflow: hidden; border-radius: var(--radius-md)">
+                <iframe
+                  title="KBCC location on Google Maps"
+                  loading="lazy"
+                  style="width: 100%; aspect-ratio: 16 / 10; border: 0"
+                  src="https://www.google.com/maps?q=4%2C%20Alhaji%20Yusuf%20Adebayo%20Street%2C%20Olodi%20Apapa%2C%20Lagos&output=embed"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__body stack">
+              <h2 class="card__title">Social &amp; Audio Messages</h2>
+              <p style="margin: 0">
+                Follow KBCC and listen to audio messages on Telegram.
+              </p>
+              <div class="grid grid--2">
+                <a class="btn btn--ghost" href="https://www.facebook.com/kingdomofbelieversministry" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a class="btn btn--ghost" href="https://youtube.com/@kingdomofbelieverschristia7222?si=B9MEr1Zn2S5dr3TB" target="_blank" rel="noopener noreferrer">YouTube</a>
+                <a class="btn btn--ghost" href="https://www.instagram.com/kbcc_headquarters?igsh=eHFsanEzYzFlaTli" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a class="btn btn--primary" data-telegram href="#">Telegram (Audio)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <img src="images/logo.jpg" alt="KBCC logo" />
+            <div>
+              <h3>KBCC</h3>
+              <p class="muted" style="margin: 6px 0 0; color: rgba(255, 255, 255, 0.78)">
+                Welcome home — we’re glad you’re here.
+              </p>
+            </div>
+          </div>
+          <div class="footer__cols">
+            <div>
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="leadership.html">Leadership</a></li>
+                <li><a href="sermons.html">Sermons</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="media.html">Media</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Contact</h4>
+              <ul>
+                <li><a href="mailto:kbccmails2015@gmail.com">kbccmails2015@gmail.com</a></li>
+                <li><a data-telegram href="#">Telegram (Audio)</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span>© <span id="year"></span> Kingdom of Believers Christian Centre (KBCC)</span>
+          <span class="muted" style="color: rgba(255, 255, 255, 0.72)">Contact</span>
         </div>
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>
+
+

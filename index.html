@@ -1,440 +1,336 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kingdom of Believers Christian Centre - The Answer City</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    <meta
+      name="description"
+      content="Kingdom of Believers Christian Centre (KBCC) — Raising men and women who will be Answers in the society."
     />
+    <title>KBCC — Kingdom of Believers Christian Centre</title>
+    <link rel="icon" href="images/logo.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="container">
-        <div class="nav-wrapper">
-          <a href="index.html" class="logo">
-            <img src="images/logo.jpg" alt="KBCC Logo" />
-            <span>KBCC</span>
-          </a>
-          <button class="mobile-toggle" id="mobileToggle">
-            <i class="fas fa-bars"></i>
-          </button>
-          <ul class="nav-menu" id="navMenu">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="leadership.html">Leadership</a></li>
-            <li><a href="sermons.html">Sermons</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-nav>
+      <div class="container nav">
+        <a class="brand" href="index.html" aria-label="KBCC Home">
+          <img src="images/logo.jpg" alt="KBCC logo" />
+          <span class="brand__text">
+            <span class="brand__name">KBCC</span>
+            <span class="brand__tag">Kingdom of Believers Christian Centre</span>
+          </span>
+        </a>
+
+        <button
+          class="nav__toggle"
+          type="button"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="site-menu"
+        >
+          <span class="nav__toggle-lines" aria-hidden="true"><span></span></span>
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <nav id="site-menu" class="nav__links" data-nav-menu aria-label="Primary">
+          <a href="index.html" data-nav-link="true">Home</a>
+          <a href="about.html" data-nav-link="true">About</a>
+          <a href="leadership.html" data-nav-link="true">Leadership</a>
+          <a href="sermons.html" data-nav-link="true">Sermons</a>
+          <a href="events.html" data-nav-link="true">Events</a>
+          <a href="media.html" data-nav-link="true">Media</a>
+          <a href="contact.html" data-nav-link="true">Contact</a>
+        </nav>
+
+        <div class="nav__cta">
+          <a class="btn btn--secondary btn--small" href="sermons.html">Watch Sermons</a>
+          <a class="btn btn--primary btn--small" href="contact.html#plan">Plan a Visit</a>
         </div>
       </div>
-    </nav>
+    </header>
 
-    <!-- Hero Slider Section -->
-    <section class="hero-slider">
-      <div class="slider-container">
-        <!-- Slide 1: Welcome -->
-        <div class="slide active">
-          <div class="slide-background" style="background: linear-gradient(135deg, #002366 0%, #1e3a8a 100%);"></div>
-          <div class="container">
-            <div class="slide-content">
-              <div class="slide-badge">EST. 2003</div>
-              <h1 class="slide-title">Welcome to<br />The Answer City</h1>
-              <p class="slide-text">
-                Raising men and women who will be Answers in the society.
-              </p>
-              <div class="slide-buttons">
-                <a href="contact.html" class="btn btn-primary">
-                  <span>Plan Your Visit</span>
-                  <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="about.html" class="btn btn-outline-white">
-                  <span>Learn More</span>
-                  <i class="fas fa-info-circle"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+    <main id="main">
+      <section class="hero">
+        <div class="hero__bg" aria-hidden="true">
+          <img src="images/12.jpeg" alt="" />
         </div>
-
-        <!-- Slide 2: Fire Power Night -->
-        <div class="slide">
-          <div class="slide-background" style="background: linear-gradient(135deg, #1a1a1a 0%, #002366 100%);"></div>
-          <div class="container">
-            <div class="slide-content">
-              <div class="slide-badge">DON'T MISS</div>
-              <h1 class="slide-title">Fire Power Night</h1>
-              <p class="slide-text-large">The Rain of Miracles</p>
-              <p class="slide-text">
-                November 28, 2025 | 9:00 PM | The Answer City
-              </p>
-              <div class="slide-buttons">
-                <a href="events.html" class="btn btn-primary">
-                  <span>View All Events</span>
-                  <i class="fas fa-calendar"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 3: Service Times -->
-        <div class="slide">
-          <div class="slide-background" style="background: linear-gradient(135deg, #002366 0%, #2563eb 100%);"></div>
-          <div class="container">
-            <div class="slide-content">
-              <div class="slide-badge">JOIN US</div>
-              <h1 class="slide-title">Service Times</h1>
-              <div class="slide-service-times">
-                <div class="slide-service-item">
-                  <i class="fas fa-calendar-week"></i>
-                  <h3>Wednesday</h3>
-                  <p>Spirit Communion Service</p>
-                  <span class="time">6:00 PM</span>
-                </div>
-                <div class="slide-service-item">
-                  <i class="fas fa-church"></i>
-                  <h3>Sunday</h3>
-                  <p>Service of Grace & Glory</p>
-                  <span class="time">8:00 AM & 10:00 AM</span>
-                </div>
-              </div>
-              <div class="slide-buttons">
-                <a href="contact.html" class="btn btn-primary">
-                  <span>Get Directions</span>
-                  <i class="fas fa-map-marker-alt"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 4: Latest Sermon -->
-        <div class="slide">
-          <div class="slide-background" style="background: linear-gradient(135deg, #1e3a8a 0%, #002366 100%);"></div>
-          <div class="container">
-            <div class="slide-content">
-              <div class="slide-badge">LATEST MESSAGE</div>
-              <h1 class="slide-title">The Name of Jesus</h1>
-              <p class="slide-text-large">Part 1</p>
-              <p class="slide-text">
-                Discover the depth, weight, and glory wrapped inside the name
-                that God exalted above every other name.
-              </p>
-              <div class="slide-buttons">
-                <a href="sermons.html" class="btn btn-primary">
-                  <span>Watch Now</span>
-                  <i class="fas fa-play-circle"></i>
-                </a>
-                <a href="sermons.html" class="btn btn-outline-white">
-                  <span>All Sermons</span>
-                  <i class="fas fa-book-open"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slider Navigation -->
-      <button class="slider-arrow slider-prev" id="sliderPrev">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-      <button class="slider-arrow slider-next" id="sliderNext">
-        <i class="fas fa-chevron-right"></i>
-      </button>
-
-      <!-- Slider Dots -->
-      <div class="slider-dots" id="sliderDots">
-        <button class="dot active" data-slide="0"></button>
-        <button class="dot" data-slide="1"></button>
-        <button class="dot" data-slide="2"></button>
-        <button class="dot" data-slide="3"></button>
-      </div>
-    </section>
-
-    <!-- Service Times Section -->
-    <section class="section section-grey">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">JOIN US FOR WORSHIP</span>
-          <h2 class="section-title">Service Times</h2>
-        </div>
-        <div class="service-grid">
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-calendar-week"></i>
-            </div>
-            <h3>Midweek Service</h3>
-            <p class="service-name">Spirit Communion Service</p>
-            <p class="service-day">Every Wednesday</p>
-            <p class="service-time">6:00 PM</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-church"></i>
-            </div>
-            <h3>Sunday Services</h3>
-            <p class="service-name">Service of Grace & Glory</p>
-            <p class="service-day">Every Sunday</p>
-            <p class="service-time">8:00 AM & 10:00 AM</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <h3>Our Location</h3>
-            <p class="service-name">The Answer City</p>
-            <p class="service-address">
-              4, Alhaji Yusuf Adebayo Street<br />Olodi Apapa, Lagos
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Latest Sermons - Card Grid -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">MESSAGES THAT TRANSFORM</span>
-          <h2 class="section-title">Latest Sermons</h2>
-        </div>
-        <div class="sermon-card-grid">
-          <div class="sermon-card">
-            <div class="sermon-thumbnail">
-              <div class="sermon-placeholder">
-                <i class="fas fa-play-circle"></i>
-              </div>
-            </div>
-            <div class="sermon-card-content">
-              <span class="sermon-badge">NEW</span>
-              <h3>The Name of Jesus (Part 1)</h3>
-              <p class="sermon-author">Pastor Gbenga Olusanya</p>
-              <p class="sermon-excerpt">
-                Discover the depth, weight, and glory wrapped inside the name
-                that God exalted above every other name.
-              </p>
-              <a href="sermons.html" class="btn btn-secondary btn-small">
-                <span>Watch</span>
-                <i class="fas fa-play"></i>
-              </a>
-            </div>
-          </div>
-          <div class="sermon-card">
-            <div class="sermon-thumbnail">
-              <div class="sermon-placeholder">
-                <i class="fas fa-play-circle"></i>
-              </div>
-            </div>
-            <div class="sermon-card-content">
-              <h3>Kingdom Life Principles</h3>
-              <p class="sermon-author">Pastor Gbenga Olusanya</p>
-              <p class="sermon-excerpt">
-                Learn to live the kingdom lifestyle and become everything God
-                has ordained you to be.
-              </p>
-              <a href="sermons.html" class="btn btn-secondary btn-small">
-                <span>Watch</span>
-                <i class="fas fa-play"></i>
-              </a>
-            </div>
-          </div>
-          <div class="sermon-card">
-            <div class="sermon-thumbnail">
-              <div class="sermon-placeholder">
-                <i class="fas fa-play-circle"></i>
-              </div>
-            </div>
-            <div class="sermon-card-content">
-              <h3>Walking in Authority</h3>
-              <p class="sermon-author">Pastor Gbenga Olusanya</p>
-              <p class="sermon-excerpt">
-                Every believer is called to walk in dominion through the Name of
-                Jesus Christ.
-              </p>
-              <a href="sermons.html" class="btn btn-secondary btn-small">
-                <span>Watch</span>
-                <i class="fas fa-play"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="text-center" style="margin-top: 40px">
-          <a href="sermons.html" class="btn btn-outline">View All Sermons</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Welcome Message -->
-    <section class="section section-grey">
-      <div class="container">
-        <div class="welcome-box">
-          <span class="section-label">FROM THE LEAD PASTOR</span>
-          <h2>A Message of Welcome</h2>
-          <p class="intro-text">
-            It is my joy and honour to welcome you to the online home of Kingdom
-            of Believers Christian Centre.
-          </p>
+        <div class="container hero__grid">
+          <span class="pill">Welcome to Kingdom of Believers Christian Centre (KBCC)</span>
+          <h1>Raising men and women who will be Answers in the society.</h1>
           <p>
-            Whether you are joining us for the first time, returning after a
-            while, or seeking a place to grow deeper in God, please know that
-            you are welcome, valued, and loved. We are committed to transforming
-            lives through the Word of God, heartfelt worship, intentional
-            discipleship, and a strong culture of love and service.
+            Whether you are visiting for the first time or returning after a while, you are
+            welcome, valued, and loved. KBCC is a family committed to transforming lives through
+            the Word, worship, discipleship, and a culture of love and service.
           </p>
-          <div class="signature-section">
-            <p class="signature-name">Pastor Gbenga Olusanya</p>
-            <p class="signature-title">Lead Pastor, KBCC</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="contact.html#plan">Plan a Visit</a>
+            <a class="btn btn--ghost" href="about.html">Learn about KBCC</a>
+          </div>
+          <div class="hero__meta" aria-label="Quick highlights">
+            <span class="pill">Wednesdays • 6:00 PM</span>
+            <span class="pill">Sundays • 8:00 AM &amp; 10:00 AM</span>
+            <span class="pill">The Answer City • Lagos</span>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Featured Events -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">UPCOMING</span>
-          <h2 class="section-title">Featured Events</h2>
-        </div>
-        <div class="event-card-grid">
-          <div class="event-card">
-            <div class="event-date">
-              <span class="event-day">28</span>
-              <span class="event-month">NOV</span>
-            </div>
-            <h3>Fire Power Night</h3>
-            <p class="event-theme">The Rain of Miracles</p>
-            <p class="event-details"><i class="fas fa-clock"></i> 9:00 PM</p>
-            <p class="event-details">
-              <i class="fas fa-map-marker-alt"></i> The Answer City
-            </p>
-          </div>
-          <div class="event-card">
-            <div class="event-date">
-              <span class="event-day">18-20</span>
-              <span class="event-month">DEC</span>
-            </div>
-            <h3>Believers Camp Meeting 2025</h3>
-            <p class="event-theme">The City Takers</p>
-            <p class="event-details"><i class="fas fa-calendar"></i> 3 Days</p>
-            <p class="event-details">
-              <i class="fas fa-map-marker-alt"></i> Redemption City of God
-            </p>
-          </div>
-          <div class="event-card">
-            <div class="event-date">
-              <span class="event-day">31</span>
-              <span class="event-month">DEC</span>
-            </div>
-            <h3>WatchNight Service</h3>
-            <p class="event-theme">Crossing Over to Possess</p>
-            <p class="event-details"><i class="fas fa-clock"></i> 8:00 PM</p>
-            <p class="event-details">
-              <i class="fas fa-map-marker-alt"></i> The Answer City
-            </p>
-          </div>
-        </div>
-        <div class="text-center" style="margin-top: 40px">
-          <a href="events.html" class="btn btn-outline">View All Events</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Connect Section -->
-    <section class="section section-grey">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">STAY CONNECTED</span>
-          <h2 class="section-title">Follow Us Online</h2>
-        </div>
-        <div class="social-grid">
-          <a
-            href="https://www.facebook.com/kingdomofbelieversministry"
-            target="_blank"
-            class="social-card"
-          >
-            <i class="fab fa-facebook-f"></i>
-            <h4>Facebook</h4>
-            <p>Follow us on Facebook</p>
-          </a>
-          <a
-            href="https://youtube.com/@kingdomofbelieverschristia7222"
-            target="_blank"
-            class="social-card"
-          >
-            <i class="fab fa-youtube"></i>
-            <h4>YouTube</h4>
-            <p>Watch our sermons</p>
-          </a>
-          <a
-            href="https://www.instagram.com/kbcc_headquarters"
-            target="_blank"
-            class="social-card"
-          >
-            <i class="fab fa-instagram"></i>
-            <h4>Instagram</h4>
-            <p>See our community</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-col">
-            <img src="images/logo.jpg" alt="KBCC" class="footer-logo" />
-            <h4>Kingdom of Believers Christian Centre</h4>
-            <p>Raising men and women who will be Answers in the society.</p>
-          </div>
-          <div class="footer-col">
-            <h5>Quick Links</h5>
-            <ul>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="leadership.html">Leadership</a></li>
-              <li><a href="sermons.html">Sermons</a></li>
-              <li><a href="events.html">Events</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h5>Contact</h5>
-            <p>
-              <i class="fas fa-map-marker-alt"></i> 4, Alhaji Yusuf Adebayo
-              Street, Olodi Apapa, Lagos
-            </p>
-            <p><i class="fas fa-envelope"></i> kbccmails2015@gmail.com</p>
-            <p><i class="fas fa-clock"></i> Tue-Sat: 9am - 5pm</p>
-          </div>
-          <div class="footer-col">
-            <h5>Service Times</h5>
-            <p><strong>Wednesday</strong><br />6:00 PM</p>
-            <p><strong>Sunday</strong><br />8:00 AM & 10:00 AM</p>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>
-            &copy; 2025 Kingdom of Believers Christian Centre. All rights
-            reserved.
+      <section class="section section--tight">
+        <div class="container stack">
+          <h2 class="section-title">Media Highlights</h2>
+          <p class="section-kicker">
+            A glimpse of worship, Word, and fellowship at KBCC. Swipe on mobile, or use arrows and
+            dots to navigate.
           </p>
+
+          <div class="carousel" data-carousel aria-label="KBCC gallery carousel">
+            <div class="carousel__viewport" data-carousel-viewport>
+              <div class="carousel__track" data-carousel-track></div>
+              <div class="carousel__controls" aria-hidden="false">
+                <button class="carousel__btn" type="button" data-carousel-prev aria-label="Previous slide">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <button class="carousel__btn" type="button" data-carousel-next aria-label="Next slide">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+              <div class="carousel__dots" data-carousel-dots aria-label="Carousel dots"></div>
+            </div>
+          </div>
+
+          <div class="hero__actions">
+            <a class="btn btn--secondary" href="media.html">Open Media Gallery</a>
+            <a class="btn btn--ghost" href="sermons.html">Watch Messages</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid grid--2">
+          <div class="card">
+            <div class="card__body stack">
+              <h2 class="card__title">Service Times &amp; Location</h2>
+              <ul class="info-list">
+                <li>
+                  <strong>Midweek Service — Spirit Communion Service</strong>
+                  <span class="muted">Every Wednesday • 6:00 PM</span>
+                </li>
+                <li>
+                  <strong>Sunday — Service of Grace &amp; Glory</strong>
+                  <span class="muted">First Service • 8:00 AM • Second Service • 10:00 AM</span>
+                </li>
+                <li>
+                  <strong>The Answer City</strong>
+                  <span class="muted"
+                    >4, Alhaji Yusuf Adebayo Street, Coconut or Ibafon Bus Stop, Olodi Apapa, Lagos.</span
+                  >
+                </li>
+              </ul>
+              <div class="hero__actions">
+                <a
+                  class="btn btn--primary"
+                  href="https://www.google.com/maps?q=4%2C%20Alhaji%20Yusuf%20Adebayo%20Street%2C%20Olodi%20Apapa%2C%20Lagos&output=classic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Get Directions
+                </a>
+                <a class="btn btn--ghost" href="contact.html">Contact Us</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__body stack">
+              <h2 class="card__title">Latest Sermon Preview</h2>
+              <p class="muted" style="margin: 0">
+                <strong>The Name of Jesus (Part 1)</strong> — By Pastor Gbenga Olusanya (PGO)
+              </p>
+              <p style="margin: 0">
+                The name of Jesus is the greatest spiritual force given to humanity. Discover the
+                authority, victory, healing, deliverance, and answered prayers available through His
+                name—and how your relationship with Jesus shapes the results you command.
+              </p>
+              <hr class="divider" />
+              <div class="hero__actions">
+                <a
+                  class="btn btn--secondary"
+                  href="https://youtube.com/@kingdomofbelieverschristia7222?si=B9MEr1Zn2S5dr3TB"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Watch on YouTube
+                </a>
+                <a
+                  class="btn btn--ghost"
+                  href="https://www.facebook.com/kingdomofbelieversministry"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Watch on Facebook
+                </a>
+                <a class="btn btn--primary" data-telegram href="#">Listen on Telegram</a>
+              </div>
+              <p class="form-note">
+                Audio messages are available on Telegram. Click “Listen on Telegram” to open in a new
+                tab.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container stack">
+          <h2 class="section-title">Upcoming Events</h2>
+          <p class="section-kicker">Plan ahead and join us for these life-building moments.</p>
+
+          <div class="grid grid--3">
+            <article class="card">
+              <div class="card__body">
+                <h3 class="card__title">Fire Power Night</h3>
+                <p class="muted" style="margin: 0">28th November, 2025 • 9:00 PM • The Answer City</p>
+                <p style="margin: 10px 0 0">A night of intense prayer, miracles, and divine encounters.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__body">
+                <h3 class="card__title">Believers Camp Meeting 2025</h3>
+                <p class="muted" style="margin: 0">18th – 20th December, 2025 • Redemption City of God</p>
+                <p style="margin: 10px 0 0">
+                  Theme: The City Takers — three days of impartation, worship, and the Word.
+                </p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__body">
+                <h3 class="card__title">WatchNight Service</h3>
+                <p class="muted" style="margin: 0">31st December, 2025 • 8:00 PM • The Answer City</p>
+                <p style="margin: 10px 0 0">
+                  Theme: Crossing Over to Possess Your Possessions — enter the new year with prophetic
+                  declarations.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="events.html">View All Events</a>
+            <a class="btn btn--ghost" href="contact.html#plan">Plan Your Visit</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container stack">
+          <h2 class="section-title">Connect With Us</h2>
+          <p class="section-kicker">
+            Stay connected with KBCC through our official platforms for announcements and messages.
+          </p>
+          <div class="grid grid--4">
+            <a class="card" href="https://www.facebook.com/kingdomofbelieversministry" target="_blank" rel="noopener noreferrer">
+              <div class="card__body">
+                <h3 class="card__title">Facebook</h3>
+                <p class="muted" style="margin: 0">Updates, livestreams, and community.</p>
+              </div>
+            </a>
+            <a class="card" href="https://youtube.com/@kingdomofbelieverschristia7222?si=B9MEr1Zn2S5dr3TB" target="_blank" rel="noopener noreferrer">
+              <div class="card__body">
+                <h3 class="card__title">YouTube</h3>
+                <p class="muted" style="margin: 0">Video messages and series.</p>
+              </div>
+            </a>
+            <a class="card" href="https://www.instagram.com/kbcc_headquarters?igsh=eHFsanEzYzFlaTli" target="_blank" rel="noopener noreferrer">
+              <div class="card__body">
+                <h3 class="card__title">Instagram</h3>
+                <p class="muted" style="margin: 0">Photos and moments.</p>
+              </div>
+            </a>
+            <a class="card" data-telegram href="#">
+              <div class="card__body">
+                <h3 class="card__title">Telegram</h3>
+                <p class="muted" style="margin: 0">Audio messages and updates.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <img src="images/logo.jpg" alt="KBCC logo" />
+            <div>
+              <h3>KBCC</h3>
+              <p class="muted" style="margin: 6px 0 0; color: rgba(255, 255, 255, 0.78)">
+                A family committed to transforming lives through the Word, worship, discipleship, and
+                love.
+              </p>
+            </div>
+          </div>
+
+          <div class="footer__cols">
+            <div>
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="leadership.html">Leadership</a></li>
+                <li><a href="sermons.html">Sermons</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Service Times</h4>
+              <ul>
+                <li>Wednesdays • 6:00 PM</li>
+                <li>Sundays • 8:00 AM &amp; 10:00 AM</li>
+              </ul>
+              <hr class="divider" />
+              <h4>Social</h4>
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/kingdomofbelieversministry" target="_blank" rel="noopener noreferrer">Facebook</a>
+                </li>
+                <li>
+                  <a href="https://youtube.com/@kingdomofbelieverschristia7222?si=B9MEr1Zn2S5dr3TB" target="_blank" rel="noopener noreferrer">YouTube</a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/kbcc_headquarters?igsh=eHFsanEzYzFlaTli" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </li>
+                <li><a data-telegram href="#">Telegram (Audio)</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span>© <span id="year"></span> Kingdom of Believers Christian Centre (KBCC)</span>
+          <span class="muted" style="color: rgba(255, 255, 255, 0.72)">Raising Answers • Lagos, Nigeria</span>
         </div>
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>
+
+

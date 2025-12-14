@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Media gallery — photos and moments from KBCC. Click any image to open a lightbox." />
+    <title>Media — KBCC</title>
+    <link rel="icon" href="images/logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-nav>
+      <div class="container nav">
+        <a class="brand" href="index.html" aria-label="KBCC Home">
+          <img src="images/logo.jpg" alt="KBCC logo" />
+          <span class="brand__text">
+            <span class="brand__name">KBCC</span>
+            <span class="brand__tag">Kingdom of Believers Christian Centre</span>
+          </span>
+        </a>
+
+        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu">
+          <span class="nav__toggle-lines" aria-hidden="true"><span></span></span>
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <nav id="site-menu" class="nav__links" data-nav-menu aria-label="Primary">
+          <a href="index.html" data-nav-link="true">Home</a>
+          <a href="about.html" data-nav-link="true">About</a>
+          <a href="leadership.html" data-nav-link="true">Leadership</a>
+          <a href="sermons.html" data-nav-link="true">Sermons</a>
+          <a href="events.html" data-nav-link="true">Events</a>
+          <a href="media.html" data-nav-link="true">Media</a>
+          <a href="contact.html" data-nav-link="true">Contact</a>
+        </nav>
+
+        <div class="nav__cta">
+          <a class="btn btn--primary btn--small" href="sermons.html">Watch Sermons</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <h1>Media Gallery</h1>
+          <p>
+            Photos and moments from KBCC. Click any image to view it larger. Use the arrow keys to
+            navigate and ESC to close.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container stack">
+          <h2 class="section-title">Gallery</h2>
+          <p class="section-kicker">Images load from <code>/images</code> in numeric order and are reused by the homepage slider.</p>
+
+          <div class="gallery-grid" data-gallery-grid aria-label="KBCC media gallery"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" data-lightbox aria-hidden="true" role="dialog" aria-label="Image viewer">
+      <div class="lightbox__panel" role="document">
+        <div class="lightbox__topbar">
+          <span class="muted">Image <span data-lightbox-count>1 / 32</span></span>
+          <button class="lightbox__close" type="button" data-lightbox-close aria-label="Close">
+            Close
+          </button>
+        </div>
+        <div class="lightbox__media">
+          <img data-lightbox-img src="images/1.jpeg" alt="KBCC gallery image" />
+          <div class="lightbox__nav">
+            <button class="carousel__btn" type="button" data-lightbox-prev aria-label="Previous image">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button class="carousel__btn" type="button" data-lightbox-next aria-label="Next image">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <img src="images/logo.jpg" alt="KBCC logo" />
+            <div>
+              <h3>KBCC</h3>
+              <p class="muted" style="margin: 6px 0 0; color: rgba(255, 255, 255, 0.78)">
+                Capturing moments of worship, Word, and community.
+              </p>
+            </div>
+          </div>
+          <div class="footer__cols">
+            <div>
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sermons.html">Sermons</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Social</h4>
+              <ul>
+                <li><a href="https://www.facebook.com/kingdomofbelieversministry" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                <li><a href="https://youtube.com/@kingdomofbelieverschristia7222?si=B9MEr1Zn2S5dr3TB" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                <li><a href="https://www.instagram.com/kbcc_headquarters?igsh=eHFsanEzYzFlaTli" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a data-telegram href="#">Telegram (Audio)</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span>© <span id="year"></span> Kingdom of Believers Christian Centre (KBCC)</span>
+          <span class="muted" style="color: rgba(255, 255, 255, 0.72)">Media</span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
+
+

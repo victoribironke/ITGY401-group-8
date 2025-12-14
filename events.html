@@ -1,318 +1,189 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Events - KBCC</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
+    <meta name="description" content="KBCC events — Upcoming services, conferences, and special gatherings." />
+    <title>Events — KBCC</title>
+    <link rel="icon" href="images/logo.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="container">
-        <div class="nav-wrapper">
-          <a href="index.html" class="logo">
-            <img src="images/logo.jpg" alt="KBCC Logo" />
-            <span>KBCC</span>
-          </a>
-          <button class="mobile-toggle" id="mobileToggle">
-            <i class="fas fa-bars"></i>
-          </button>
-          <ul class="nav-menu" id="navMenu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="leadership.html">Leadership</a></li>
-            <li><a href="sermons.html">Sermons</a></li>
-            <li><a href="events.html" class="active">Events</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-nav>
+      <div class="container nav">
+        <a class="brand" href="index.html" aria-label="KBCC Home">
+          <img src="images/logo.jpg" alt="KBCC logo" />
+          <span class="brand__text">
+            <span class="brand__name">KBCC</span>
+            <span class="brand__tag">Kingdom of Believers Christian Centre</span>
+          </span>
+        </a>
+
+        <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu">
+          <span class="nav__toggle-lines" aria-hidden="true"><span></span></span>
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <nav id="site-menu" class="nav__links" data-nav-menu aria-label="Primary">
+          <a href="index.html" data-nav-link="true">Home</a>
+          <a href="about.html" data-nav-link="true">About</a>
+          <a href="leadership.html" data-nav-link="true">Leadership</a>
+          <a href="sermons.html" data-nav-link="true">Sermons</a>
+          <a href="events.html" data-nav-link="true">Events</a>
+          <a href="media.html" data-nav-link="true">Media</a>
+          <a href="contact.html" data-nav-link="true">Contact</a>
+        </nav>
+
+        <div class="nav__cta">
+          <a class="btn btn--primary btn--small" href="contact.html#plan">Plan a Visit</a>
         </div>
       </div>
-    </nav>
+    </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-      <div class="container">
-        <h1>Upcoming Events</h1>
-        <p>Join us for powerful gatherings and transformative experiences</p>
-      </div>
-    </section>
-
-    <!-- Events List -->
-    <section class="events-list">
-      <div class="container">
-        <!-- Event Item -->
-        <div class="event-item">
-          <div class="event-date-large">
-            <span class="day">28</span>
-            <span class="month">November</span>
-            <span class="year">2025</span>
-          </div>
-          <div class="event-content">
-            <h2>Fire Power Night</h2>
-            <p class="event-theme">
-              <i class="fas fa-fire"></i> Theme: The Rain of Miracles
-            </p>
-            <p class="event-description">
-              A night of intense prayer, miracles, and divine encounters. Come
-              and experience the supernatural power of God as we gather for a
-              night that will transform your life.
-            </p>
-            <div class="event-meta">
-              <span><i class="fas fa-clock"></i> 9:00 PM</span>
-              <span><i class="fas fa-map-marker-alt"></i> The Answer City</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Event Item -->
-        <div class="event-item">
-          <div class="event-date-large">
-            <span class="day">6</span>
-            <span class="month">December</span>
-            <span class="year">2025</span>
-          </div>
-          <div class="event-content">
-            <h2>Children's Christmas Party</h2>
-            <p class="event-description">
-              A fun-filled celebration for our children with games, gifts,
-              music, and the joy of Christmas. Bring your children and let them
-              experience the love and joy of Christ this season!
-            </p>
-            <div class="event-meta">
-              <span><i class="fas fa-clock"></i> 12:00 Noon</span>
-              <span><i class="fas fa-map-marker-alt"></i> The Answer City</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Event Item -->
-        <div class="event-item">
-          <div class="event-date-large">
-            <span class="day">7</span>
-            <span class="month">December</span>
-            <span class="year">2025</span>
-          </div>
-          <div class="event-content">
-            <h2>Annual Family Thanksgiving Service</h2>
-            <p class="event-description">
-              A joyful moment for families to return thanks to God for His
-              goodness all year long. Join us as we celebrate God's faithfulness
-              with gratitude and praise.
-            </p>
-            <div class="event-meta">
-              <span><i class="fas fa-clock"></i> 9:00 AM</span>
-              <span><i class="fas fa-map-marker-alt"></i> The Answer City</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Event Item -->
-        <div class="event-item">
-          <div class="event-date-large">
-            <span class="day">14</span>
-            <span class="month">December</span>
-            <span class="year">2025</span>
-          </div>
-          <div class="event-content">
-            <h2>Pre-Believers Camp Meeting (BCM) Service</h2>
-            <p class="event-description">
-              A prophetic prelude to the life-changing Camp Meeting. Prepare
-              your heart for a powerful encounter with God.
-            </p>
-            <div class="event-meta">
-              <span><i class="fas fa-clock"></i> 9:00 AM</span>
-              <span><i class="fas fa-map-marker-alt"></i> The Answer City</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Event Item - Highlighted -->
-        <div class="event-item featured-event">
-          <div class="event-date-large">
-            <span class="day">18-20</span>
-            <span class="month">December</span>
-            <span class="year">2025</span>
-          </div>
-          <div class="event-content">
-            <span class="featured-badge">Featured Event</span>
-            <h2>Believers Camp Meeting 2025</h2>
-            <p class="event-theme">
-              <i class="fas fa-star"></i> Theme: The City Takers
-            </p>
-            <p class="event-description">
-              Three days of impartation, encounters, worship, and the Word. This
-              is a life-transforming gathering you don't want to miss. Join
-              believers from across the nation for intense spiritual
-              experiences.
-            </p>
-            <div class="event-meta">
-              <span><i class="fas fa-calendar-alt"></i> 3 Days</span>
-              <span
-                ><i class="fas fa-map-marker-alt"></i> Redemption City of
-                God</span
-              >
-            </div>
-          </div>
-        </div>
-
-        <!-- Event Item -->
-        <div class="event-item">
-          <div class="event-date-large">
-            <span class="day">25</span>
-            <span class="month">December</span>
-            <span class="year">2025</span>
-          </div>
-          <div class="event-content">
-            <h2>Christmas Service</h2>
-            <p class="event-description">
-              Celebrate the birth of Jesus in a joyful atmosphere of worship and
-              thanksgiving. Come with your family and friends to honor the King
-              of Kings.
-            </p>
-            <div class="event-meta">
-              <span><i class="fas fa-clock"></i> 9:00 AM</span>
-              <span><i class="fas fa-map-marker-alt"></i> The Answer City</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Event Item - Highlighted -->
-        <div class="event-item featured-event">
-          <div class="event-date-large">
-            <span class="day">31</span>
-            <span class="month">December</span>
-            <span class="year">2025</span>
-          </div>
-          <div class="event-content">
-            <span class="featured-badge">Featured Event</span>
-            <h2>WatchNight Service</h2>
-            <p class="event-theme">
-              <i class="fas fa-trophy"></i> Theme: Crossing Over to Possess Your
-              Possessions
-            </p>
-            <p class="event-description">
-              Cross into the new year with prophetic declarations and
-              supernatural alignment. A powerful night of prayer, worship, and
-              divine positioning for the year ahead.
-            </p>
-            <div class="event-meta">
-              <span><i class="fas fa-clock"></i> 8:00 PM</span>
-              <span><i class="fas fa-map-marker-alt"></i> The Answer City</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Event Item -->
-        <div class="event-item">
-          <div class="event-date-large">
-            <span class="day">12 Jan - 1 Feb</span>
-            <span class="month"></span>
-            <span class="year">2026</span>
-          </div>
-          <div class="event-content">
-            <h2>21 Days "Possessing Your Possessions" Fast</h2>
-            <p class="event-description">
-              A season of fasting, prayer, and spiritual renewal for the new
-              year. Join us as we seek God's face and position ourselves for
-              breakthrough and supernatural manifestations.
-            </p>
-            <div class="event-meta">
-              <span><i class="fas fa-calendar-alt"></i> 21 Days</span>
-              <span><i class="fas fa-praying-hands"></i> Prayer & Fasting</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Event Item - Highlighted -->
-        <div class="event-item featured-event">
-          <div class="event-date-large">
-            <span class="day">11-15</span>
-            <span class="month">March</span>
-            <span class="year">2026</span>
-          </div>
-          <div class="event-content">
-            <span class="featured-badge">Featured Event</span>
-            <h2>Kingdom Life Conference 2026</h2>
-            <p class="event-theme">
-              <i class="fas fa-crown"></i> Theme: The Heirs of God
-            </p>
-            <p class="event-description">
-              A transformational conference built to equip believers for
-              inheritance, authority, and dominion. Five days of powerful
-              teaching, impartation, and life-changing encounters with God.
-            </p>
-            <div class="event-meta">
-              <span><i class="fas fa-calendar-alt"></i> 5 Days</span>
-              <span><i class="fas fa-map-marker-alt"></i> The Answer City</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="cta-section">
-      <div class="container">
-        <h2>Don't Miss Out!</h2>
-        <p>Stay connected and be the first to know about upcoming events</p>
-        <a href="contact.html" class="btn btn-primary">Contact Us</a>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-col">
-            <h4>Kingdom of Believers Christian Centre</h4>
-            <p>Raising men and women who will be Answers in the society.</p>
-            <p><strong>EST. 2003</strong></p>
-          </div>
-          <div class="footer-col">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="leadership.html">Leadership</a></li>
-              <li><a href="sermons.html">Sermons</a></li>
-              <li><a href="events.html">Events</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Contact Us</h4>
-            <p>
-              <i class="fas fa-map-marker-alt"></i> 4, Alhaji Yusuf Adebayo
-              Street, Olodi Apapa, Lagos
-            </p>
-            <p><i class="fas fa-envelope"></i> kbccmails2015@gmail.com</p>
-            <p><i class="fas fa-clock"></i> Tue-Sat: 9am - 5pm</p>
-          </div>
-          <div class="footer-col">
-            <h4>Service Times</h4>
-            <p><strong>Wednesday:</strong> 6:00 PM</p>
-            <p><strong>Sunday:</strong> 8:00 AM & 10:00 AM</p>
-          </div>
-        </div>
-        <div class="footer-bottom">
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <h1>Upcoming Events</h1>
           <p>
-            &copy; 2025 Kingdom of Believers Christian Centre. All rights
-            reserved.
+            Join KBCC for life-transforming encounters—services, conferences, and special gatherings.
           </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container stack">
+          <h2 class="section-title">Events List</h2>
+          <p class="section-kicker">Times and venues are included where provided.</p>
+
+          <div class="grid grid--2">
+            <article class="card">
+              <div class="card__body">
+                <h3 class="card__title">Fire Power Night — November 2025</h3>
+                <p class="muted" style="margin: 0">Date: 28th November, 2025 • Time: 9:00 PM • Venue: The Answer City</p>
+                <p style="margin: 10px 0 0">Theme: The Rain of Miracles — a night of intense prayer, miracles, and divine encounters.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__body">
+                <h3 class="card__title">Children’s Christmas Party</h3>
+                <p class="muted" style="margin: 0">Date: 6th December, 2025 (First Saturday) • Time: 12:00 Noon • Venue: The Answer City</p>
+                <p style="margin: 10px 0 0">A fun-filled celebration for our children with games, gifts, music, and the joy of Christmas.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__body">
+                <h3 class="card__title">Annual Family Thanksgiving Service</h3>
+                <p class="muted" style="margin: 0">Date: 7th December, 2025 • Time: 9:00 AM • Venue: The Answer City</p>
+                <p style="margin: 10px 0 0">A joyful moment for families to return thanks to God for His goodness all year long.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__body">
+                <h3 class="card__title">Pre–Believers Camp Meeting (BCM) Service</h3>
+                <p class="muted" style="margin: 0">Date: Sunday, 14th December, 2025 • Time: 9:00 AM • Venue: The Answer City</p>
+                <p style="margin: 10px 0 0">A prophetic prelude to the life-changing Camp Meeting.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__body">
+                <h3 class="card__title">Believers Camp Meeting 2025</h3>
+                <p class="muted" style="margin: 0">Date: 18th – 20th December, 2025 • Venue: Redemption City of God</p>
+                <p style="margin: 10px 0 0">Theme: The City Takers — three days of impartation, encounters, worship, and the Word.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__body">
+                <h3 class="card__title">Christmas Service</h3>
+                <p class="muted" style="margin: 0">Date: 25th December, 2025 • Time: 9:00 AM • Venue: The Answer City</p>
+                <p style="margin: 10px 0 0">Celebrate the birth of Jesus in a joyful atmosphere of worship and thanksgiving.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__body">
+                <h3 class="card__title">WatchNight Service</h3>
+                <p class="muted" style="margin: 0">Date: 31st December, 2025 • Time: 8:00 PM • Venue: The Answer City</p>
+                <p style="margin: 10px 0 0">Theme: Crossing Over to Possess Your Possessions — cross into the new year with prophetic declarations.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__body">
+                <h3 class="card__title">21 Days “Possessing Your Possessions” Fast</h3>
+                <p class="muted" style="margin: 0">Date: 12th January – 1st February, 2026</p>
+                <p style="margin: 10px 0 0">A season of fasting, prayer, and spiritual renewal for the new year.</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__body">
+                <h3 class="card__title">Kingdom Life Conference 2026</h3>
+                <p class="muted" style="margin: 0">Date: 11th – 15th March, 2026 • Venue: The Answer City</p>
+                <p style="margin: 10px 0 0">Theme: The Heirs of God — a transformational conference to equip believers for inheritance, authority, and dominion.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="contact.html#plan">Plan a Visit</a>
+            <a class="btn btn--secondary" data-telegram href="#">Listen on Telegram</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <img src="images/logo.jpg" alt="KBCC logo" />
+            <div>
+              <h3>KBCC</h3>
+              <p class="muted" style="margin: 6px 0 0; color: rgba(255, 255, 255, 0.78)">
+                Stay close — worship with us and join upcoming gatherings.
+              </p>
+            </div>
+          </div>
+          <div class="footer__cols">
+            <div>
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sermons.html">Sermons</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Social</h4>
+              <ul>
+                <li><a href="https://www.facebook.com/kingdomofbelieversministry" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                <li><a href="https://youtube.com/@kingdomofbelieverschristia7222?si=B9MEr1Zn2S5dr3TB" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                <li><a href="https://www.instagram.com/kbcc_headquarters?igsh=eHFsanEzYzFlaTli" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a data-telegram href="#">Telegram (Audio)</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span>© <span id="year"></span> Kingdom of Believers Christian Centre (KBCC)</span>
+          <span class="muted" style="color: rgba(255, 255, 255, 0.72)">Events</span>
         </div>
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>
+
+
