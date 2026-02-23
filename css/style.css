@@ -265,7 +265,9 @@ button:focus-visible {
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity var(--transition-slow), transform var(--transition-slow);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
 }
 
 .fade-in.visible {
@@ -505,7 +507,9 @@ button:focus-visible {
     align-items: center;
     gap: var(--space-6);
     padding: var(--space-8);
-    transition: right var(--transition-base), visibility var(--transition-base);
+    transition:
+      right var(--transition-base),
+      visibility var(--transition-base);
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
     z-index: 1001;
     visibility: hidden;
@@ -552,7 +556,8 @@ button:focus-visible {
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
     visibility: hidden;
-    transition: opacity var(--transition-base),
+    transition:
+      opacity var(--transition-base),
       visibility var(--transition-base);
     z-index: 1000;
   }
@@ -919,7 +924,8 @@ button:focus-visible {
   padding: var(--space-12);
   text-align: center;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-  transition: transform var(--transition-base),
+  transition:
+    transform var(--transition-base),
     box-shadow var(--transition-base);
 }
 
@@ -1622,7 +1628,8 @@ button:focus-visible {
   border-radius: var(--radius-lg);
   padding: var(--space-8);
   text-align: center;
-  transition: transform var(--transition-base),
+  transition:
+    transform var(--transition-base),
     box-shadow var(--transition-base);
 }
 
@@ -1883,7 +1890,8 @@ button:focus-visible {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
-  transition: transform var(--transition-base),
+  transition:
+    transform var(--transition-base),
     box-shadow var(--transition-base);
 }
 
@@ -2357,7 +2365,9 @@ button:focus-visible {
   height: 100%;
   object-fit: cover;
   filter: brightness(0.85);
-  transition: transform var(--transition-slow), filter var(--transition-base);
+  transition:
+    transform var(--transition-slow),
+    filter var(--transition-base);
 }
 
 .ministry-card:hover img {
@@ -2995,5 +3005,306 @@ button:focus-visible {
 
   .next-steps-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   27. GIVING PAGE STYLES
+   ============================================ */
+.giving-intro {
+  background-color: var(--gray-50);
+  padding-bottom: 0;
+}
+
+.giving-section {
+  background-color: var(--gray-50);
+}
+
+.giving-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.giving-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+  border: 1px solid var(--gray-100);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.giving-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--coral-500);
+}
+
+.giving-card-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--coral-500), var(--coral-600));
+  color: var(--white);
+  border-radius: 50%;
+  margin-bottom: var(--space-5);
+}
+
+.giving-card-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.giving-card h3 {
+  font-size: var(--text-xl);
+  color: var(--navy-950);
+  margin-bottom: var(--space-4);
+}
+
+.giving-details {
+  margin-bottom: var(--space-5);
+  width: 100%;
+}
+
+.giving-account-name {
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.giving-account-number {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--navy-950);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+}
+
+.giving-bank {
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+  font-weight: 500;
+}
+
+.btn-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  padding: var(--space-2) var(--space-4);
+  margin-top: auto;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-copy.copied {
+  border-color: var(--success);
+  color: var(--success);
+}
+
+@media (max-width: 1023px) {
+  .giving-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .giving-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   28. RESOURCES / BOOKS PAGE STYLES
+   ============================================ */
+.resources-section {
+  background-color: var(--gray-50);
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-8);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.book-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+  border: 1px solid var(--gray-100);
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.book-image {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: var(--gray-100);
+}
+
+.book-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.book-card:hover .book-image img {
+  transform: scale(1.03);
+}
+
+.book-info {
+  padding: var(--space-6);
+  text-align: center;
+}
+
+.book-info h3 {
+  font-size: var(--text-xl);
+  color: var(--navy-950);
+  margin-bottom: var(--space-2);
+}
+
+.book-author {
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+  margin-bottom: var(--space-5);
+}
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 767px) {
+  .books-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}
+
+/* ============================================
+   29. UPDATED CORE VALUES (5-card layout)
+   ============================================ */
+.values-grid-5 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.value-card-detailed {
+  text-align: left;
+}
+
+.value-card-detailed h3 {
+  font-size: var(--text-xl);
+}
+
+.value-points {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-4) 0;
+}
+
+.value-points li {
+  position: relative;
+  padding-left: var(--space-5);
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: var(--space-2);
+}
+
+.value-points li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: var(--coral-500);
+  font-size: 0.6em;
+  top: 0.5em;
+}
+
+.value-scripture {
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+  border-top: 1px solid var(--gray-100);
+  padding-top: var(--space-3);
+  margin-top: var(--space-3);
+  font-style: italic;
+}
+
+.value-scripture strong {
+  font-style: normal;
+  color: var(--gray-700);
+}
+
+.culture-statement {
+  text-align: center;
+  margin-top: var(--space-12);
+  padding: var(--space-10);
+  background: linear-gradient(135deg, var(--navy-950) 0%, var(--navy-800) 100%);
+  border-radius: var(--radius-xl);
+  color: var(--white);
+}
+
+.culture-summary p {
+  font-size: var(--text-lg);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+  margin-bottom: var(--space-6);
+}
+
+.culture-summary strong {
+  color: var(--gold-400);
+}
+
+.culture-statement blockquote {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-style: italic;
+  color: var(--white);
+  border-left: 3px solid var(--gold-400);
+  padding-left: var(--space-6);
+  margin: 0;
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1023px) {
+  .values-grid-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .values-grid-5 {
+    grid-template-columns: 1fr;
+  }
+
+  .culture-statement {
+    padding: var(--space-6);
+  }
+
+  .culture-statement blockquote {
+    font-size: var(--text-lg);
+    padding-left: var(--space-4);
   }
 }
