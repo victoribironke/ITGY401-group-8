@@ -386,12 +386,12 @@ button:focus-visible {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: var(--space-10);
+  gap: var(--space-6);
 }
 
 .nav-link {
   font-family: var(--font-display);
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   font-weight: 500;
   color: var(--gray-700);
   position: relative;
