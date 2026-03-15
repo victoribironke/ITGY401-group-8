@@ -523,7 +523,7 @@ button:focus-visible {
 
   .nav-menu .nav-link {
     font-size: var(--text-lg);
-    color: var(--navy-950);
+    color: var(--navy-950) !important;
     padding: var(--space-3) var(--space-4);
     width: 100%;
     text-align: center;
